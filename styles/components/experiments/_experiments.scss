@@ -1,0 +1,55 @@
+@import './illustration';
+@import './sketching';
+@import './branding';
+@import './windsurf';
+
+.experiments-name-project {
+  font-family: $font-poppins;
+  font-size: $font-24 * 3;
+  font-weight: $poppins-regular;
+}
+
+.experiments-project-name {
+  display: flex;
+  flex-direction: column;
+
+  span {
+    display: inline-block;
+    font-family: $font-poppins;
+    font-size: $font-24 * 3;
+    font-weight: $poppins-regular;
+  }
+
+  span:last-of-type {
+    border: 1.5px solid $color-dark-gray;
+    bottom: 20px;
+    font-weight: $poppins-semibold;
+    line-height: 58px;
+    position: relative;
+  }
+
+  div {
+    bottom: 20px;
+    height: 1px;
+  }
+}
+
+.experiments-project-task {
+  font-family: $font-poppins;
+  font-size: $font-14;
+  font-weight: $poppins-regular;
+  height: auto;
+  margin-top: $em;
+
+  p {
+    letter-spacing: $em * 0.075;
+  }
+}
+
+.experiments__description--illustrations {
+  @include experiments-description($color-white);
+}
+
+.experiments__description {
+  @include experiments-description();
+}

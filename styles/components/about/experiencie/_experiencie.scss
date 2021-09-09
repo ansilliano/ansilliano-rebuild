@@ -1,0 +1,148 @@
+.experiencie__future {
+  @include position-experiencie(85px, 100px);
+
+  display: flex;
+  justify-content: flex-end;
+}
+
+.container-modal-left {
+  img {
+    left: 100px;
+    position: absolute;
+    top: 50px;
+  }
+
+  span {
+    position: absolute;
+    right: 45px;
+    top: 140px;
+    width: 75%;
+
+    p {
+      color: $color-wine-red;
+      font-family: $font-poppins;
+      font-size: 12px;
+      font-weight: $poppins-light;
+    }
+  }
+
+  h5 {
+    color: $color-dark-wine;
+    font-family: $font-poppins;
+    font-family: $font-barrio;
+    font-size: $font-24 * 1.5;
+    font-weight: $poppins-light;
+    left: 185px;
+    position: absolute;
+    top: 65px;
+  }
+}
+
+.title-card-froz {
+  h5 {
+    color: $color-dark-wine;
+    font-family: $font-poppins;
+    font-family: $font-barrio;
+    font-size: $font-24 * 1.5;
+    font-weight: $poppins-light;
+    position: absolute;
+    top: 75px;
+  }
+}
+
+.container-modal-froz {
+  span {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: absolute;
+    right: 45px;
+    top: 120px;
+    width: 75%;
+
+    p {
+      color: $color-wine-red;
+      font-family: $font-poppins;
+      font-size: $font-16;
+      font-weight: $poppins-light;
+    }
+  }
+
+  h5 {
+    color: $color-dark-wine;
+    font-family: $font-poppins;
+    font-family: $font-barrio;
+    font-size: $font-24 * 1.5;
+    font-weight: $poppins-light;
+  }
+}
+
+.container-modal {
+  img {
+    left: 50px;
+    position: absolute;
+    top: 60px;
+  }
+
+  span {
+    position: absolute;
+    right: 103px;
+    top: 140px;
+    width: 75%;
+
+    p {
+      color: $color-wine-red;
+      font-family: $font-poppins;
+      font-size: 12px;
+      font-weight: $poppins-light;
+    }
+  }
+
+  h5 {
+    color: $color-dark-wine;
+    font-family: $font-poppins;
+    font-family: $font-barrio;
+    font-size: $font-24 * 1.5;
+    font-weight: $poppins-light;
+    left: 135px;
+    position: absolute;
+    top: 75px;
+  }
+}
+
+.experiencie__petararte {
+  @include position-experiencie(500px, 100px);
+
+  display: flex;
+  justify-content: center;
+}
+
+.experiencie__platzi {
+  @include position-experiencie(None, 110px);
+
+  display: flex;
+  justify-content: space-around;
+  left: 260px;
+}
+
+.experiencie__tecma {
+  @include position-experiencie(75px, 110px);
+
+  display: flex;
+  justify-content: flex-end;
+}
+
+.experiencie__spain {
+  @include position-experiencie(260px, 110px);
+
+  display: flex;
+  justify-content: center;
+}
+
+.experiencie__aiesec {
+  @include position-experiencie(460px, 110px);
+
+  display: flex;
+  justify-content: center;
+}

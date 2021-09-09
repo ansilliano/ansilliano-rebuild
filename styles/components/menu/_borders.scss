@@ -1,0 +1,42 @@
+.icon {
+  border-right: 2.5px solid $color-dark-wine;
+  grid-column: 1/2;
+  height: $h-100 + 20;
+  position: absolute;
+  right: 0;
+  top: -10%;
+}
+
+.line-top,
+.line-bottom {
+  background-color: $color-dark-wine;
+  height: 2px;
+  position: absolute;
+  width: 104%;
+}
+
+.line-top {
+  bottom: 0;
+  left: -2%;
+}
+
+.line-bottom {
+  right: -2%;
+  top: 0;
+}
+
+.line-left,
+.line-right {
+  border-left: 2px solid $color-dark-wine;
+  height: 120%;
+  position: absolute;
+  top: -10%;
+}
+
+.line-left {
+  grid-column: 1/1;
+}
+
+.line-right {
+  grid-column: -1/-1;
+}

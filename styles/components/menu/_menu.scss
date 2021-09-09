@@ -1,0 +1,69 @@
+@import './borders';
+@import './header';
+
+.menu {
+  display: grid;
+  gap: $em * 2.4;
+  grid-template-columns: repeat(12, 1fr);
+  height: $em * 6.1;
+  position: relative;
+  width: $w-100;
+}
+
+.menu__icon {
+  @include center-items;
+
+  grid-column: 1/2;
+  width: $w-100;
+
+  svg {
+    width: $w-100;
+  }
+}
+
+.menu__items {
+  @include center-items;
+
+  grid-column: 3/-1;
+  justify-content: flex-end;
+
+  a {
+    color: $color-dark-wine;
+    font-family: $font-mansalva;
+    font-size: $font-18;
+    margin: 0 $em *0.5;
+    position: relative;
+    text-decoration: none;
+
+    &::before {
+      background-image: url('../../../public/assets/icons/line.svg');
+      background-position: bottom center;
+      background-repeat: no-repeat;
+      bottom: 0;
+      content: '';
+      height: 100%;
+      position: absolute;
+      transition: all 0.3s ease-in-out;
+      width: 100%;
+      width: 0;
+    }
+
+    &:hover::before {
+      width: 100%;
+    }
+  }
+
+  a.active-link {
+    background-image: url('../../../public/assets/icons/line.svg');
+    background-position: bottom center;
+    background-repeat: no-repeat;
+  }
+}
+
+.active-menu-item > svg {
+  transition: all 0.5s ease-in-out;
+
+  path {
+    fill: #fff;
+  }
+}

@@ -1,0 +1,137 @@
+
+.work__text {
+  margin-top: $em * 3;
+
+  p {
+    color: $color-dark-gray;
+    font-family: $font-poppins;
+    font-size: $font-18;
+    font-weight: $poppins-light;
+    line-height: $lh-10 * 2;
+    margin-top: $em;
+
+    span {
+      font-family: $font-mansalva;
+    }
+
+    strong {
+      background-image: url('../../../public/assets/icons/underline-big.svg');
+      background-position: center bottom;
+      background-repeat: no-repeat;
+      font-family: $font-mansalva;
+      font-weight: normal;
+    }
+  }
+}
+
+.cards-works {
+  grid-column: 1/-1;
+  margin: $em * 8 0;
+}
+
+.grid-works {
+  display: grid;
+  gap: $em * 2.4;
+  grid-template-columns: repeat(2, 1fr);
+
+  article:last-of-type {
+    cursor: default;
+  }
+}
+
+.card-work {
+  @include center-items;
+
+  border-radius: $em;
+  cursor: pointer;
+  flex-direction: column;
+  height: $em * 29.4;
+  transition: all 0.6s ease-in-out;
+  width: $w-100;
+
+  p {
+    @include card-work-title($size: $font-24 * 2);
+
+    padding: $em * 0.5;
+  }
+
+  &:hover > svg {
+    transform: scale(1.2);
+    transition: transform 0.6s ease-in-out;
+
+    path {
+      fill: #fff;
+    }
+  }
+
+  &:hover > p {
+    color: #fff;
+    transform: scale(1.2);
+    transition: transform 0.6s ease-in-out;
+  }
+
+  &:last-child:hover {
+    p {
+      color: #3e3e3e;
+    }
+  }
+}
+
+.modal-image {
+  @include center-items;
+
+  align-items: flex-start;
+  border-radius: 4px;
+  color: $color-white;
+  flex-direction: column;
+  font-family: $font-poppins;
+  font-size: $font-16;
+  font-weight: $poppins-regular;
+  height: $hv-100;
+  margin: auto;
+  width: $w-100;
+  z-index: 50;
+
+  div {
+    @include center-items;
+
+    flex-direction: column;
+    margin: auto;
+    width: auto;
+
+    img {
+      border-radius: 4px;
+      max-height: $hv-100 - 20;
+      max-width: $w-100;
+      width: auto;
+    }
+
+    p {
+      align-self: flex-start;
+      z-index: 100;
+    }
+  }
+}
+
+.button__link {
+  @include center-items;
+
+  border: 1px solid $color-black;
+  border-radius: $em *5;
+  color: $color-black;
+  cursor: pointer;
+  font-family: $font-barrio;
+  font-size: $font-20;
+  grid-column: 4/-4;
+  height: $em * 2;
+  margin: $em * 4 0;
+  text-decoration: none;
+
+  & > svg {
+    margin-left: $em * 0.75;
+  }
+
+  &:hover {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
+  }
+}

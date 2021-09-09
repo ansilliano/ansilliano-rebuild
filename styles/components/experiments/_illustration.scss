@@ -1,0 +1,120 @@
+.line_white {
+  align-self: flex-end;
+  background-color: $color-white;
+  grid-column: 3/-2;
+  height: 1px;
+}
+
+.illustration__intro {
+  background-image: url('https://storage.googleapis.com/assets-portafolio/illustration/illustration_hero.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: $hv-100 + 50;
+}
+
+.illustration__intro--info {
+  color: $color-white;
+  grid-column: 3/5;
+
+  h4 {
+    font-weight: $poppins-medium;
+  }
+}
+
+.line__white {
+  align-self: flex-start;
+  background-color: $color-white;
+  grid-column: 3/-2;
+  height: 1px;
+}
+
+.illustrations__grid {
+  column-gap: $em * 4;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  row-gap: $em * 8;
+  // grid-template-columns: [col] 1fr [col] 1fr [col] 1fr [col] 1fr  [col] 1fr  [col] 1fr;
+  // grid-template-rows: [row] auto [row] auto [row] auto [row] auto [row];
+  // grid-template-rows: repeat(4, 1fr);
+}
+
+.illustrations__grid--miscellaneous {
+  column-gap: $em * 4;
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  row-gap: $em * 8;
+  // grid-template-columns: [col] 1fr [col] 1fr [col] 1fr [col] 1fr  [col] 1fr  [col] 1fr;
+  // grid-template-rows: [row] auto [row] auto [row] auto [row] auto [row];
+  // grid-template-rows: repeat(4, 1fr);
+}
+
+.cardIllustrations--miscellaneous {
+  border-radius: 4px;
+  cursor: pointer;
+  filter: drop-shadow(0 2px 6px rgba(0, 0, 0, 0.2));
+  width: $w-100;
+
+  p {
+    color: $color-dark-gray;
+    font-family: $font-poppins;
+    font-size: $font-14;
+    font-weight: $poppins-regular;
+  }
+
+  img {
+    border-radius: 4px;
+    height: 100%;
+    max-width: 100%;
+    // object-fit: fill;
+    object-fit: contain;
+    width: 100%;
+  }
+}
+
+.sketching__intro {
+  background-image: url('https://storage.googleapis.com/assets-portafolio/sketching/02_astronauta.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: $hv-100 + 40;
+}
+
+.sketching__intro--info {
+  color: $color-black;
+  grid-column: 3/5;
+
+  h4 {
+    font-weight: $poppins-medium;
+  }
+}
+
+.line__black {
+  align-self: flex-start;
+  background-color: $color-black;
+  grid-column: 3/8;
+  height: 1px;
+}
+
+.cardWindsurf {
+  border-radius: 4px;
+  cursor: pointer;
+  filter: drop-shadow(0 2px 6px rgba(0, 0, 0, 0.2));
+  width: $w-100;
+
+  p {
+    color: $color-dark-gray;
+    font-family: $font-poppins;
+    font-size: $font-14;
+    font-weight: $poppins-regular;
+  }
+
+  img {
+    border-radius: 4px;
+    height: 100%;
+    max-width: 100%;
+    // object-fit: fill;
+    object-fit: cover;
+    width: 100%;
+  }
+}

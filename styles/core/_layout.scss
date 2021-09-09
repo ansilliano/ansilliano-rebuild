@@ -1,0 +1,75 @@
+.container-red {
+  background-color: $color-light-red;
+}
+
+.container-white {
+  background-color: $color-white;
+}
+
+.container_aux {
+  display: grid;
+  gap: $em * 2.4;
+  grid-template-columns: repeat(12, 1fr);
+  height: $em * 56;
+  width: $w-100;
+}
+
+.layout-grid {
+  display: grid;
+  gap: $em * 2.4;
+  grid-template-columns: repeat(12, 1fr);
+  width: $w-100;
+}
+
+.main_container {
+  padding: 0 $em * 4;
+  width: $w-100;
+}
+
+.base-container-without-margin {
+  display: grid;
+  gap: $em * 2.4;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: 150px 1fr;
+  margin: $em * 4 auto;
+  max-width: $em * 120;
+  width: $w-100;
+}
+
+.experiments-container-without-margin {
+  column-gap: $em * 2.4;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: 100px 10px 1fr;
+  margin: $em * 4 auto;
+  max-width: $em * 120;
+  row-gap: $em;
+  width: $w-100;
+}
+
+.base-container {
+  display: grid;
+  gap: $em * 2.4;
+  grid-template-columns: repeat(12, 1fr);
+  margin: 0 auto;
+  margin-top: $em * 14.8;
+  max-width: $em * 120;
+  width: $w-100;
+}
+
+.base-container-big {
+  display: grid;
+  gap: $em * 2.4;
+  grid-template-columns: repeat(12, 1fr);
+  margin-top: $em * 14.8 a;
+  width: $w-100;
+}
+
+.layout-max-width {
+  display: grid;
+  gap: $em * 2.4;
+  grid-template-columns: repeat(12, 1fr);
+  margin: 0 auto;
+  max-width: $em * 120;
+  width: $w-100;
+}

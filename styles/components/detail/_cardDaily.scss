@@ -1,0 +1,22 @@
+.cardDaily {
+  border-radius: 4px;
+  cursor: pointer;
+  filter: drop-shadow(0 2px 6px rgba(0, 0, 0, 0.2));
+  width: $w-100;
+
+  p {
+    color: $color-dark-gray;
+    font-family: $font-poppins;
+    font-size: $font-14;
+    font-weight: $poppins-regular;
+  }
+
+  img {
+    border-radius: 4px;
+    height: 100%;
+    max-width: 100%;
+    // object-fit: fill;
+    object-fit: cover;
+    width: 100%;
+  }
+}

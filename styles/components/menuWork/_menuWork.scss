@@ -1,0 +1,59 @@
+.menu-work {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 30px 1fr 30px;
+  margin-top: $em * 4;
+  position: fixed;
+  width: $em * 7.8;
+  z-index: 100;
+
+  svg {
+    height: 30px;
+    width: 30px;
+  }
+}
+
+.menu-item {
+  @include center-items;
+
+  border-radius: $em * 0.75;
+  cursor: pointer;
+  height: $em * 6;
+  margin: $em * 1 0;
+  transition: all 0.5s ease-in-out;
+  width: $em * 6;
+  z-index: 10;
+
+  svg {
+    height: $em * 2.7;
+    width: $em * 2.7;
+
+    :active {
+      fill: #fff;
+    }
+  }
+}
+
+.swiper-container {
+  grid-row: 2/3;
+  height: $em * 25;
+}
+
+.arrow-up {
+  grid-row: 1/2;
+}
+
+.arrow-down {
+  grid-row: 3/-1;
+}
+
+.arrow-down,
+.arrow-up {
+  @include center-items;
+
+  z-index: 10;
+
+  &:hover {
+    cursor: pointer;
+  }
+}

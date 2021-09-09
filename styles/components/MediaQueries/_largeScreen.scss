@@ -1,0 +1,27 @@
+@media screen and (min-width: 1440px) {
+  .rrss,
+  .home__name {
+    justify-content: flex-end;
+    padding-bottom: $em * 14;
+  }
+
+  .home__name {
+    p {
+      font-size: $font-24 * 8;
+      line-height: $em * 1;
+    }
+  }
+
+  .rrss {
+    svg {
+      height: 60px;
+      width: 60px;
+    }
+  }
+
+  .line-top,
+  .line-bottom {
+    left: -1%;
+    width: 102%;
+  }
+}

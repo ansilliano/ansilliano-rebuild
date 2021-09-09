@@ -1,0 +1,21 @@
+.header {
+  @include center-items;
+
+  height: $em * 14.8;
+  position: fixed;
+  top: 0;
+  width: $w-100;
+}
+
+.bg-menu_white {
+  background-color: $color-white;
+}
+
+.bg-menu_red {
+  background-color: $color-light-red;
+}
+
+.bg-menu_red,
+.bg-menu_white {
+  z-index: 10;
+}

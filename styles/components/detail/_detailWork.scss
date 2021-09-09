@@ -1,0 +1,11 @@
+@import './cardDaily';
+@import './dailyui';
+@import './pika';
+
+.work-detail {
+  grid-column: 1/-1;
+
+  img {
+    width: $w-100;
+  }
+}

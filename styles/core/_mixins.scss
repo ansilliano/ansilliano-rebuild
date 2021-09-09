@@ -1,0 +1,136 @@
+@mixin center-items {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+@mixin list-style {
+  background-repeat: no-repeat;
+  content: '';
+  display: inline-block;
+  height: $s-10;
+  margin-right: $em;
+  width: $s-10;
+}
+
+@mixin border-lines {
+  background-color: $color-dark-wine;
+  position: absolute;
+}
+
+@mixin position-experiencie($right, $top) {
+  position: absolute;
+  right: $right;
+  top: $top;
+}
+
+@mixin heading($size, $color: $color-white) {
+  color: $color;
+  font-family: $font-barrio;
+  font-size: $size;
+}
+
+@mixin hoover-menu-item($url) {
+  background-image: url($url);
+  background-origin: content-box;
+  background-position: center bottom;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+@mixin text-general($size: $font-16, $color: $color-dark-gray) {
+  color: $color;
+  font-family: $font-poppins;
+  font-size: $size;
+  line-height: $em;
+}
+
+@mixin card-work-title($size: $font-16) {
+  color: $color-dark-gray;
+  font-family: $font-barrio;
+  font-size: $size;
+}
+
+@mixin experiments-description($color: $color-black) {
+  color: $color;
+  grid-column: 3/8;
+  margin-top: $em * 5;
+}
+
+@mixin typography($font) {
+  .typography--source {
+    @include center-items;
+
+    align-items: stretch;
+    color: $color-black;
+    flex-direction: column;
+    grid-column: 1/-1;
+    height: $h-100;
+    justify-content: space-between;
+
+    &__title {
+      font-size: $font-24 * 1.25;
+      font-weight: $poppins-semibold;
+    }
+
+    p {
+      font-family: $font;
+      height: 50px;
+      width: $w-100;
+    }
+
+    &__details {
+      @include center-items;
+
+      align-items: flex-start;
+      flex-direction: column;
+      justify-content: space-between;
+      margin-bottom: $em;
+
+      div:first-of-type {
+        font-size: $font-20;
+        font-weight: 300;
+        justify-self: flex-end;
+
+        p {
+          font-size: $font-24;
+          font-weight: 300;
+        }
+      }
+
+      div:last-of-type {
+        font-weight: 300;
+        height: $em * 12;
+        letter-spacing: $em * 0.1;
+
+        p {
+          font-size: $font-20;
+          line-height: $em * 1.5;
+        }
+      }
+    }
+
+    &__info {
+      @include center-items;
+
+      font-family: $font;
+      font-size: $font-20;
+      grid-column: 3/-4;
+      justify-content: space-between;
+      margin-top: $em * 2;
+
+      span {
+        margin: 0 $em * 0.4;
+      }
+    }
+
+    &__text {
+      color: $color-text;
+      font-family: $font;
+      font-size: $font-20;
+      grid-column: 3/-3;
+      line-height: $em * 1.75;
+      margin-top: $em;
+    }
+  }
+}

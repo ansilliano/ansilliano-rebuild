@@ -1,0 +1,186 @@
+.about__tools {
+  margin-bottom: $em * 5;
+}
+
+.tools__container {
+  color: $color-neutral-gray;
+  display: grid;
+  font-family: $font-poppins;
+  font-size: $font-16;
+  grid-column: 1/-1;
+  grid-template-columns: 1fr 1fr 1fr;
+  justify-items: center;
+  list-style: none;
+  margin-top: $em * 4;
+
+  div {
+    line-height: $lh-10 * 3.5;
+    list-style-image: url('../../../public/assets/icons/list-points/point-1.svg');
+  }
+}
+
+.tool {
+  div {
+    @include center-items;
+
+    justify-content: flex-start;
+  }
+
+  div:nth-of-type(1)::before {
+    @include list-style;
+
+    background-image: url('../../../public/assets/icons/list-points/point-1.svg');
+  }
+
+  div:nth-of-type(2)::before {
+    @include list-style;
+
+    background-image: url('../../../public/assets/icons/list-points/point-2.svg');
+  }
+
+  div:nth-of-type(3)::before {
+    @include list-style;
+
+    background-image: url('../../../public/assets/icons/list-points/point-3.svg');
+  }
+
+  div:nth-of-type(4)::before {
+    @include list-style;
+
+    background-image: url('../../../public/assets/icons/list-points/point-4.svg');
+  }
+
+  div:nth-of-type(5)::before {
+    @include list-style;
+
+    background-image: url('../../../public/assets/icons/list-points/point-5.svg');
+  }
+
+  div:nth-of-type(6)::before {
+    @include list-style;
+
+    background-image: url('../../../public/assets/icons/list-points/point-7.svg');
+  }
+
+  div:nth-of-type(6) span {
+    color: $color-dark-wine;
+    font-family: $font-mansalva;
+    margin-left: $em * 0.5;
+  }
+
+  div:nth-of-type(7)::before {
+    @include list-style;
+
+    background-image: url('../../../public/assets/icons/list-points/point-8.svg');
+  }
+}
+
+.skill {
+  div {
+    @include center-items;
+
+    justify-content: flex-start;
+  }
+
+  div:nth-of-type(1)::before {
+    @include list-style;
+
+    background-image: url('../../../public/assets/icons/list-points/point-8.svg');
+  }
+
+  div:nth-of-type(2)::before {
+    @include list-style;
+
+    background-image: url('../../../public/assets/icons/list-points/point-9.svg');
+  }
+
+  div:nth-of-type(3)::before {
+    @include list-style;
+
+    background-image: url('../../../public/assets/icons/list-points/point-10.svg');
+  }
+
+  div:nth-of-type(4)::before {
+    @include list-style;
+
+    background-image: url('../../../public/assets/icons/list-points/point-11.svg');
+  }
+
+  div:nth-of-type(5)::before {
+    @include list-style;
+
+    background-image: url('../../../public/assets/icons/list-points/point-12.svg');
+  }
+}
+
+.general {
+  div {
+    @include center-items;
+
+    justify-content: flex-start;
+  }
+
+  div:nth-of-type(1)::before {
+    @include list-style;
+
+    background-image: url('../../../public/assets/icons/list-points/point-13.svg');
+  }
+
+  div:nth-of-type(2) {
+    position: relative;
+  }
+
+  div:nth-of-type(2) span {
+    font-family: $font-mansalva;
+    left: $em * 2;
+    position: inherit;
+    top: -$em * 1.5;
+
+    &::before {
+      background-image: url('../../../public/assets/icons/arrow-notes.svg');
+      background-repeat: no-repeat;
+      bottom: $em;
+      content: '';
+      height: $em;
+      left: -$em * 4.5;
+      position: absolute;
+      width: $em * 5;
+    }
+  }
+
+  div:nth-of-type(2)::before {
+    @include list-style;
+
+    background-image: url('../../../public/assets/icons/list-points/point-14.svg');
+  }
+
+  div:nth-of-type(3)::before {
+    @include list-style;
+
+    background-image: url('../../../public/assets/icons/list-points/point-15.svg');
+  }
+
+  div:nth-of-type(4)::before {
+    @include list-style;
+
+    background-image: url('../../../public/assets/icons/list-points/point-16.svg');
+  }
+
+  div:nth-of-type(5)::before {
+    @include list-style;
+
+    background-image: url('../../../public/assets/icons/list-points/point-17.svg');
+  }
+
+  div:nth-of-type(6)::before {
+    @include list-style;
+
+    background-image: url('../../../public/assets/icons/list-points/point-18.svg');
+  }
+
+  div:nth-of-type(7)::before {
+    @include list-style;
+
+    background-image: url('../../../public/assets/icons/list-points/point-19.svg');
+  }
+}

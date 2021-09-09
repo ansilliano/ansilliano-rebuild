@@ -1,0 +1,48 @@
+@media screen and (max-width: 520px) {
+  .main_container {
+    padding: 0 $em * 1.6;
+  }
+
+  .header {
+    max-width: $wv-100;
+  }
+
+  .h2-title {
+    font-size: $font-24 * 2;
+    text-align: left;
+  }
+
+  .base-container {
+    gap: 0;
+    grid-template-columns: 100%;
+    padding: 0 $em * 1.6;
+  }
+
+  .about.base-container {
+    padding: 0;
+  }
+
+  .doodle-img {
+    grid-column: 1/-1;
+    grid-row: 2/3;
+
+    img {
+      transform: rotate(0);
+    }
+  }
+
+  .intro__text {
+    grid-row: 3/4;
+  }
+
+  .intro__text p:nth-of-type(4) {
+    text-align: right;
+    width: $w-100 - 40;
+  }
+
+  .about__experiencie {
+    @include center-items;
+
+    margin-top: $em * 6;
+  }
+}

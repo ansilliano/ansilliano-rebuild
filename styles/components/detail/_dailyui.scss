@@ -1,0 +1,159 @@
+
+.dailyUI__intro {
+  background-image: url('https://storage.googleapis.com/assets-portafolio/daily-ui-background_.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: $hv-100;
+}
+
+.dailyUI__intro--info {
+  color: $color-dark-gray;
+  grid-column: 3/5;
+
+  h4 {
+    font-weight: $poppins-medium;
+  }
+}
+
+.line_black {
+  align-self: flex-end;
+  background-color: $color-black;
+  grid-column: 5/8;
+  height: 1px;
+}
+
+.work_explain {
+  grid-column: 2/-2;
+}
+
+.project-name {
+  display: flex;
+  flex-direction: column;
+
+  span {
+    display: inline-block;
+    font-family: $font-poppins;
+    font-size: $font-24 * 3;
+    font-weight: $poppins-regular;
+  }
+
+  span:last-of-type {
+    border: 1.5px solid $color-dark-gray;
+    bottom: 20px;
+    font-weight: $poppins-semibold;
+    line-height: 58px;
+    position: relative;
+  }
+
+  div {
+    bottom: 20px;
+    height: 1px;
+  }
+}
+
+.project-task {
+  font-family: $font-poppins;
+  font-size: $font-14;
+  font-weight: $poppins-regular;
+  height: auto;
+  margin-top: $em;
+
+  p {
+    letter-spacing: $em * 0.075;
+  }
+}
+
+.project-tools {
+  font-family: $font-poppins;
+  font-size: $font-14;
+  font-weight: $poppins-regular;
+  height: auto;
+  margin-top: $em;
+
+  div {
+    margin-top: $em * 0.2;
+  }
+}
+
+.dailyUI__description {
+  color: $color-dark-gray;
+  grid-column: 3/-1;
+}
+
+.dailyUI__title {
+  display: inline-block;
+  grid-column: 2/-1;
+  height: $em * 20;
+  margin: $em * 4 0;
+  position: relative;
+  width: $w-100;
+  z-index: 2;
+
+  span {
+    float: right;
+    width: $w-100;
+
+    // p {
+    //   right: 0;
+    // }
+
+    p:first-of-type {
+      bottom: 20px;
+      color: $color-letter-title;
+      font-family: $font-poppins;
+      font-size: $font-16;
+      letter-spacing: $em * 0.095;
+      position: absolute;
+    }
+
+    p:last-of-type {
+      bottom: -10px;
+      color: $color-dark-gray;
+      font-family: $font-poppins;
+      font-size: $font-22;
+      font-weight: $poppins-bold;
+      position: absolute;
+    }
+  }
+
+  & svg {
+    float: right;
+  }
+}
+
+.dailyUI__text {
+  color: $color-neutral-gray;
+  font-family: $font-poppins;
+  font-size: $font-18;
+  font-weight: $poppins-light;
+  grid-column: 3/-2;
+  margin: $em * 2 0;
+  width: $w-100;
+
+  p {
+    line-height: $em * 1.75;
+  }
+}
+
+.dailyUI__container {
+  grid-column: 3/-2;
+  height: auto;
+  width: $w-100;
+}
+
+.dailyUI__grid {
+  display: grid;
+  gap: $em * 6.4 $em * 2.4;
+  grid-template-columns: repeat(2, 1fr);
+  width: $w-100;
+}
+
+.intro__container {
+  max-width: $w-100;
+  padding: 0 $em * 4;
+}
+
+.grid__container--margin {
+  margin-bottom: $em * 8;
+}

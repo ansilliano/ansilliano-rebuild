@@ -1,0 +1,83 @@
+.experiencie_container {
+  display: grid;
+  gap: $em;
+  grid-template-columns: repeat(6, 1fr);
+  height: $em * 30;
+  margin-top: $em * 4;
+  position: relative;
+  width: $w-100;
+}
+
+.curve-line {
+  @include center-items;
+
+  grid-column: 3/-1;
+  position: absolute;
+  transform: translateY(-50%);
+  width: $w-100;
+}
+
+.timeline {
+  @include center-items;
+
+  grid-column: 1/-1;
+  height: $h-100;
+  position: absolute;
+
+  img {
+    width: $w-100 - 15;
+  }
+}
+
+.detailExperiencie {
+  color: $color-dark-gray;
+  display: grid;
+  grid-template-rows: 45% 10% 30%;
+  height: $h-100;
+  min-width: $em * 18.3;
+  width: $w-100;
+
+  p:last-of-type {
+    font-size: $font-14;
+    font-weight: $poppins-light;
+  }
+
+  &__year {
+    grid-row: 1/2;
+  }
+
+  &__year,
+  &__dot,
+  &__info {
+    @include center-items;
+
+    flex-direction: column;
+    justify-content: flex-end;
+  }
+
+  &__dot {
+    img {
+      z-index: 5;
+    }
+
+    :hover {
+      cursor: pointer;
+    }
+  }
+}
+
+.experiencie_container
+  .detailExperiencie:nth-child(even)
+  .detailExperiencie__info {
+  grid-row: 1/2;
+}
+
+.experiencie_container
+  .detailExperiencie:nth-child(even)
+  .detailExperiencie__year {
+  grid-row: 3/-1;
+
+  p {
+    transform: translateY(-300%);
+  }
+}

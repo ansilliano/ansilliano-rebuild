@@ -1,0 +1,131 @@
+@import './experiencie';
+@import './experiencie/detail';
+@import './education';
+@import './tools';
+
+.about {
+  gap: 0;
+  grid-column: 1/-1;
+  margin-top: $em * 7;
+  width: $w-100;
+
+  h2 {
+    grid-column: 1/-1;
+  }
+}
+
+.about.base-container {
+  margin-top: 0;
+}
+
+.text-intro {
+  @include text-general($size: $font-14 - 2);
+
+  grid-column: 1/8;
+}
+
+.doodle-img {
+  @include center-items;
+
+  grid-column: 8/-1;
+
+  img {
+    transform: rotate(-15deg);
+    width: 90%;
+  }
+}
+
+.about__intro {
+  @include center-items;
+
+  align-items: flex-start;
+  flex-direction: column;
+  height: $h-100;
+}
+
+.intro__text {
+  margin-top: $em * 3;
+
+  strong {
+    background-image: url('/../../../public/assets/icons/urderline.svg');
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    font-weight: normal;
+  }
+
+  p {
+    color: $color-dark-gray;
+    font-family: $font-poppins;
+    font-size: $font-16;
+    line-height: $lh-10 * 2;
+    margin-top: $em;
+  }
+
+  p:nth-of-type(2) {
+    position: relative;
+
+    &::before {
+      content: 'and windsurfer';
+      font-family: $font-mansalva;
+      height: auto;
+      left: $em * 21;
+      position: absolute;
+      top: -$em * 3.1;
+    }
+
+    &::after {
+      background-image: url('../../../public/assets/icons/arrow-notes.svg');
+      background-repeat: no-repeat;
+      bottom: -$em * 0.05;
+      content: '';
+      height: $em * 5;
+      left: $em * 17;
+      position: absolute;
+      transform: scale(0.75);
+      width: $em * 5;
+    }
+  }
+
+  p:nth-of-type(4) {
+    float: right;
+    font-family: $font-mansalva;
+    font-size: $font-20;
+    margin: 0;
+  }
+}
+
+.experiencie-container {
+  grid-column: 1/-1;
+  margin: $em * 6 0;
+  position: relative;
+
+  span {
+    @include heading($font-16, $color: $color-dark-gray);
+
+    grid-column: 1/-1;
+  }
+}
+
+.about__experiencie {
+  grid-column: 1/-1;
+
+  h2 {
+    grid-column: 2/-1;
+  }
+}
+
+.education-container {
+  grid-column: 1/-1;
+}
+
+.about__education {
+  grid-column: 1/-1;
+
+  h2 {
+    grid-column: 2/-1;
+  }
+}
+
+.tools-container {
+  grid-column: 1/-1;
+}

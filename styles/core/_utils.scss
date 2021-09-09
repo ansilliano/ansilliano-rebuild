@@ -1,0 +1,85 @@
+.h2-title {
+  @include heading($font-24 * 2, $color: $color-dark-gray);
+}
+
+.h2-small {
+  @include heading($font-24, $color: $color-dark-gray);
+}
+
+.contact-button {
+  @include center-items;
+
+  width: $em * 7.8;
+  z-index: 10;
+}
+
+.button {
+  background-color: $color-light-red;
+  border-radius: 50%;
+  bottom: 10%;
+  height: 40px;
+  position: fixed;
+  width: 40px;
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  svg {
+    height: 40px;
+    width: 40px;
+  }
+}
+
+.modal {
+  background-color: rgba(40, 2, 6, 0.5);
+  bottom: 0;
+  left: 0;
+  position: fixed;
+  right: 0;
+  top: 0;
+  transition: all 0.5s ease-in-out;
+  z-index: 100;
+}
+
+.experiencie-modal {
+  position: relative;
+  z-index: 200;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    background-color: #fff;
+  }
+
+  to {
+    background-color: rgba(40, 2, 6, 0.5);
+  }
+}
+
+.works-modal {
+  position: absolute;
+  transition: all 0.5s ease-in-out;
+  z-index: 200;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.h4-header {
+  color: $color-dark-gray;
+  font-family: $font-poppins;
+  font-size: $font-18;
+  font-weight: $poppins-semibold;
+}
+
+.p-card {
+  font-family: $font-poppins;
+  font-size: $font-14;
+  font-weight: $poppins-regular;
+}
