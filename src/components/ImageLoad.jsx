@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 
+// eslint-disable-next-line react/display-name
 const ImageLoad = React.memo(
   ({ src, alt = '', fitObject, classStyle = '' }) => {
     const [loading, setLoading] = useState(true);
@@ -19,6 +20,7 @@ const ImageLoad = React.memo(
     }, [src]);
 
     return (
+      // eslint-disable-next-line @next/next/no-img-element
       <img
         className={classStyle}
         src={currentSrc}
