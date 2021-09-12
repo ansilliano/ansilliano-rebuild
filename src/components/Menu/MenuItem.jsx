@@ -1,5 +1,5 @@
+import { useRouter } from 'next/router';
 import React from 'react';
-import { useHistory, useLocation } from 'react-router-dom';
 
 const MenuItem = ({
   icon: Icon,
@@ -9,25 +9,25 @@ const MenuItem = ({
   hoverColor,
   handleModal = null,
   path,
+  className = '',
 }) => {
-  const { pathname } = useLocation();
-  const current = pathname.split('/')[2];
+  const { push, query } = useRouter();
+
+  const current = query['path'];
   const style = {
     backgroundColor: current === route ? hoverColor : color,
   };
-
-  const history = useHistory();
   const handleClick = (id) => {
     if (path === 'works') {
       if (id !== undefined && id !== 3) {
-        history.push(`/${path}/${route}/${id}/`);
+        push(`detail/?path=${route}&id=${id}`);
       }
       if (id === 3) {
         handleModal();
       }
     }
     if (path === 'experiments' && id !== undefined) {
-      history.push(`/${path}/${route}/${id}/`);
+      push(`detail/?path=${route}&id=${id}`);
     }
   };
 
@@ -37,9 +37,8 @@ const MenuItem = ({
       onClick={() => handleClick(id)}
       role='button'
       tabIndex={0}
-      className={`menu-item ${classes}`}
-      style={style}
-    >
+      className={`menu-item ${classes} ${className}`}
+      style={style}>
       <Icon />
     </div>
   );

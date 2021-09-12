@@ -94,21 +94,29 @@
 
   div {
     @include center-items;
-
+    position: relative;
     flex-direction: column;
     margin: auto;
-    width: auto;
+    max-width: 50vw;
+    max-height: 80vh;
+    height: auto;
+    width: $w-100;
+
 
     img {
       border-radius: 4px;
-      max-height: $hv-100 - 20;
       max-width: $w-100;
-      width: auto;
+      height: $h-100;
+      width: $w-100;
     }
 
     p {
+      padding: $em;
+      height: $hv-100;
+      position: relative;
       align-self: flex-start;
       z-index: 100;
+      color: $color-wine-red
     }
   }
 }

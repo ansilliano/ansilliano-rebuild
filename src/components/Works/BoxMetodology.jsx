@@ -24,8 +24,8 @@ const BoxMetodology = ({
     <div className='box__metodology' style={gridStyles}>
       <h5>{title}</h5>
       <div className='box__metodology--info' style={box}>
-        {list.map((item) => (
-          <BoxContent item={item} contextGrid={contextGrid} key={item.itemId} />
+        {list.map((item, index) => (
+          <BoxContent key={index + 1} item={item} contextGrid={contextGrid} />
         ))}
       </div>
     </div>

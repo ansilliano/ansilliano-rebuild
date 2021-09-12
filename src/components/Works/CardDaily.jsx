@@ -1,7 +1,8 @@
 /* eslint-disable operator-linebreak */
+import Image from 'next/image';
 import React from 'react';
+import { shimmer, toBase64 } from '../../helpers/blurplaceholder';
 import useObserver from '../../hooks/useObserver';
-import ImageLoad from '../ImageLoad';
 
 const CardDaily = ({ image, title, number, handleModal, uid, tag }) => {
   const keyTag = 'daily';
@@ -11,11 +12,18 @@ const CardDaily = ({ image, title, number, handleModal, uid, tag }) => {
     <article
       ref={element}
       className='cardDaily'
-      onClick={() => handleModal({ uid, tag, keyTag })}
-    >
+      onClick={() => handleModal({ uid, tag, keyTag })}>
       {show && (
         <>
-          <ImageLoad src={image} alt={title} />
+          <Image
+            src={image}
+            alt={title}
+            layout='fill'
+            blurDataURL={`data:image/svg+xml;base64,${toBase64(
+              shimmer(700, 475)
+            )}`}
+            placeholder='blur'
+          />
           <p>
             # {number} | {title}
           </p>

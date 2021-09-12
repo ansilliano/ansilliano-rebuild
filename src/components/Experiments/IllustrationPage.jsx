@@ -84,7 +84,6 @@ const IllustrationPage = () => {
                     title={title}
                     key={uid}
                   />
-                  // eslint-disable-next-line comma-dangle
                 )
               )}
             </div>
@@ -108,7 +107,6 @@ const IllustrationPage = () => {
                     title={title}
                     key={uid}
                   />
-                  // eslint-disable-next-line comma-dangle
                 )
               )}
             </div>

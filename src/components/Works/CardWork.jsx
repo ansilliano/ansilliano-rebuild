@@ -29,7 +29,7 @@ const CardWork = ({
     console.log(id);
     if (path === 'works') {
       if (id !== undefined && id !== 3) {
-        push(`/${path}/${route}/${id}/`);
+        push(`${path}/detail/?path=${route}&id=${id}`);
       }
 
       if (id === 3) {
@@ -42,14 +42,13 @@ const CardWork = ({
     if (path === 'experiments') {
       console.log(route);
       if (id !== undefined) {
-        push(`/${path}/${route}/${id}/`);
+        push(`${path}/detail/?path=${route}&id=${id}`);
       }
     }
   };
 
   return (
     <article
-      aria-hidden={true}
       className='card-work'
       style={style}
       onMouseEnter={() => {

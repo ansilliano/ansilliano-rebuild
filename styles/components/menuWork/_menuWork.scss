@@ -1,11 +1,14 @@
 .menu-work {
   display: grid;
+  max-height: $em * 35;
+  height: $h-100;
   grid-template-columns: 1fr;
-  grid-template-rows: 30px 1fr 30px;
+  grid-template-rows: 30px auto 30px;
   margin-top: $em * 4;
   position: fixed;
   width: $em * 7.8;
   z-index: 100;
+  row-gap: 10px;
 
   svg {
     height: 30px;
@@ -19,7 +22,6 @@
   border-radius: $em * 0.75;
   cursor: pointer;
   height: $em * 6;
-  margin: $em * 1 0;
   transition: all 0.5s ease-in-out;
   width: $em * 6;
   z-index: 10;
@@ -56,4 +58,9 @@
   &:hover {
     cursor: pointer;
   }
+}
+
+
+.center-items {
+  @include center-items
 }

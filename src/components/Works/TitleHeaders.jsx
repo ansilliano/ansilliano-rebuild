@@ -12,10 +12,10 @@ const TitleHeaders = ({ Children, subtitle, title, side }) => {
   return (
     <div className='dailyUI__title'>
       {Children}
-      <span style={styles}>
+      <div style={styles}>
         <p style={pStyle}>{subtitle}</p>
         <p style={pStyle}>{title}</p>
-      </span>
+      </div>
     </div>
   );
 };

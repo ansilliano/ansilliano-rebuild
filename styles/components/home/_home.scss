@@ -2,7 +2,7 @@
 
 .home {
   background-color: $color-light-red;
-  height: calc(100vh - 196px);
+  height: calc(100vh - 148px);
   margin-top: 148px;
 
   &__name {
@@ -14,12 +14,48 @@
     line-height: $em * 14;
     width: $w-100;
 
+    &:hover p:first-of-type {
+      animation-iteration-count: infinite;
+      animation-timing-function: ease-out;
+      animation-direction: alternate-reverse;
+      animation-duration: 0.9s;
+      animation-name: rotate;
+    }
+    &:hover p:last-of-type {
+      animation-iteration-count: infinite;
+      animation-timing-function: ease-out;
+      animation-direction: alternate;
+      animation-duration: 0.5s;
+      animation-name: rotateB;
+    }
+
     p {
+      cursor: pointer;
       @include heading($em * 18);
     }
 
     p:last-of-type {
       align-self: flex-end;
     }
+  }
+}
+
+@keyframes rotate {
+  from {
+    transform-origin: 0 0 0;
+    transform: rotate(0deg) scale(125%) scale3d(2.5, 1.2, 0.3);
+  }
+  to {
+    transform: rotate(360deg) scale(25%);
+  }
+}
+
+@keyframes rotateB {
+  from {
+    transform-origin: 0 0 0;
+    transform: rotate(360deg) scale(125%) scale3d(2.5, 1.2, 0.3);
+  }
+  to {
+    transform: rotate(0) scale(25%);
   }
 }

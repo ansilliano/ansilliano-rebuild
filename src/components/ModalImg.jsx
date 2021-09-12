@@ -1,8 +1,9 @@
 /* eslint-disable comma-dangle */
 /* eslint-disable operator-linebreak */
+import Image from 'next/image';
 import React from 'react';
 import db from '../db.json';
-import ImageLoad from './ImageLoad';
+import { shimmer, toBase64 } from '../helpers/blurplaceholder';
 
 const ModalImg = ({ uid = null, tag = null, keyTag = null }) => {
   let data = null;
@@ -30,10 +31,14 @@ const ModalImg = ({ uid = null, tag = null, keyTag = null }) => {
     <div className='modal-image'>
       {uid && (
         <div>
-          <ImageLoad
+          <Image
             alt={item.title}
             src={item.filepath}
-            placeholder={item.filepath}
+            layout='fill'
+            blurDataURL={`data:image/svg+xml;base64,${toBase64(
+              shimmer(700, 475)
+            )}`}
+            placeholder='blur'
           />
           <p>
             # {item.filename} | {item.title}

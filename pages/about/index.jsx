@@ -31,6 +31,7 @@ const About = () => {
 
   const { state, handleModal, removeModal } = useContext(AppContext);
   const { isOpen, element } = state;
+
   if (!router.isReady) {
     return <h1>...loading</h1>;
   }

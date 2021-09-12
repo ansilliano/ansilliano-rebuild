@@ -90,7 +90,8 @@
   width: $w-100;
   z-index: 2;
 
-  span {
+  div {
+    display: flex;
     float: right;
     width: $w-100;
 

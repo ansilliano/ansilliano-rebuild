@@ -1,12 +1,20 @@
+import { useRouter } from 'next/router';
 import Footer from './Footer';
 import Header from './Header';
 
 const Layout = ({ children }) => {
+  const { pathname } = useRouter();
+
   return (
     <>
       <Header />
       {children}
-      <Footer />
+
+      {pathname !== '/' && (
+        <div>
+          <Footer />
+        </div>
+      )}
     </>
   );
 };
