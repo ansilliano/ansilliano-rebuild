@@ -5,6 +5,7 @@ import Figma from '../icons/Figma';
 import Notion from '../icons/Notion';
 import Ps from '../icons/Ps';
 import Xd from '../icons/Xd';
+import ImageLoad from '../ImageLoad';
 import CustomHead from '../Utils/CustomHead';
 import One from '../Works/numbers/One';
 import Two from '../Works/numbers/Two';
@@ -16,40 +17,51 @@ import DivergenteLogo from '/public/assets/branding/divergente_logo.svg';
 const BrandingPage = () => {
   const colors = [
     {
+      id: 1,
       color: '#405D63',
     },
     {
+      id: 2,
       color: '#5DACA9',
     },
     {
+      id: 3,
       color: '#7B858E',
     },
     {
+      id: 4,
       color: '#9E9BAB',
     },
     {
+      id: 5,
       color: '#2B2B33',
     },
     {
+      id: 6,
       color: '#E04B00',
     },
   ];
   const colorsKemus = [
     {
+      id: 1,
       color: '#0E1C26',
     },
     {
+      id: 2,
       color: '#12547B',
     },
     {
+      id: 3,
       color: '#CBE4F7',
       colorText: '#363636',
     },
     {
+      id: 4,
       color: '#F9F9F9',
       colorText: '#363636',
     },
     {
+      id: 5,
       color: '#FDD13D',
       colorText: '#363636',
     },
@@ -126,8 +138,8 @@ const BrandingPage = () => {
               <p>Colores</p>
             </div>
             <div className='branding__colores branding__container'>
-              {colors.map(({ color, index }) => (
-                <Colors key={index + 1} color={color} />
+              {colors.map(({ color, id }) => (
+                <Colors key={id} color={color} />
               ))}
             </div>
             <div className='branding__container--line'>
@@ -259,19 +271,19 @@ const BrandingPage = () => {
             </div>
             <div className='branding__container brading__convergente'>
               <div style={{ gridColumn: '1/4' }}>
-                <Image
+                <ImageLoad
                   src='https://storage.googleapis.com/assets-portafolio/branding/CVGT1.png'
                   alt='Convergente-1'
                 />
               </div>
               <div style={{ gridColumn: '4/-1' }}>
-                <Image
+                <ImageLoad
                   src='https://storage.googleapis.com/assets-portafolio/branding/CVGT3.png'
                   alt='Convergente-2'
                 />
               </div>
               <div style={{ gridColumn: '1/-1' }}>
-                <Image
+                <ImageLoad
                   src='https://storage.googleapis.com/assets-portafolio/branding/CVGT2.png'
                   alt='Convergente-3'
                 />
@@ -292,19 +304,19 @@ const BrandingPage = () => {
             </div>
             <div className='branding__container brading__convergente'>
               <div style={{ gridColumn: '1/4' }}>
-                <Image
+                <ImageLoad
                   src='https://storage.googleapis.com/assets-portafolio/branding/CVGT1.png'
                   alt='Convergente-1'
                 />
               </div>
               <div style={{ gridColumn: '4/-1' }}>
-                <Image
+                <ImageLoad
                   src='https://storage.googleapis.com/assets-portafolio/branding/CVGT3.png'
                   alt='Convergente-2'
                 />
               </div>
               <div style={{ gridColumn: '1/-1' }}>
-                <Image
+                <ImageLoad
                   src='https://storage.googleapis.com/assets-portafolio/branding/CVGT2.png'
                   alt='Convergente-3'
                 />
@@ -314,9 +326,9 @@ const BrandingPage = () => {
               <p>Colores</p>
             </div>
             <div className='branding__colores--kemus branding__container'>
-              {colorsKemus.map(({ color, colorText, index }) => (
+              {colorsKemus.map(({ color, colorText, id }) => (
                 <Colors
-                  key={index + 1}
+                  key={id}
                   color={color}
                   height='200px'
                   colorText={colorText}
@@ -394,13 +406,13 @@ const BrandingPage = () => {
               className='branding__container brading__convergente'
               style={{ marginBottom: '50px' }}>
               <div style={{ gridColumn: '1/-1' }}>
-                <Image
+                <ImageLoad
                   src='https://storage.googleapis.com/assets-portafolio/branding/kemus_marca_1.png'
                   alt='Kemus-1'
                 />
               </div>
               <div style={{ gridColumn: '1/-1' }}>
-                <Image
+                <ImageLoad
                   src='https://storage.googleapis.com/assets-portafolio/branding/kemus_marca_2.png'
                   alt='Kemus-2'
                 />

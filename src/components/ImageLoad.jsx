@@ -1,15 +1,11 @@
 import React, { useEffect, useState } from 'react';
 
 const ImageLoad = React.memo(
-  ({
-    src,
-    placeholder = 'https://dummyimage.com/2000x2000/f5f5f5/f5f5f5.jpg',
-    alt = '',
-    fitObject,
-    classStyle = '',
-  }) => {
+  ({ src, alt = '', fitObject, classStyle = '' }) => {
     const [loading, setLoading] = useState(true);
-    const [currentSrc, updateSrc] = useState(placeholder);
+    const [currentSrc, updateSrc] = useState(
+      `https://dummyimage.com/1000x500/f5f5f5/f5f5f5.jpg`
+    );
 
     useEffect(() => {
       // start loading original image

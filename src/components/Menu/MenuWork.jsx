@@ -25,8 +25,8 @@ const MenuWork = ({
         slidesPerView={3}
         spaceBetween={10}
         navigation={{
-          prevEl: '.next',
-          nextEl: '.back',
+          prevEl: '.back',
+          nextEl: '.next',
         }}>
         {items.map(({ color, Children, id, route, hoverColor }) => (
           <SwiperSlide key={id} className={`center-items`}>

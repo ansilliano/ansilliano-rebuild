@@ -66,7 +66,6 @@ const Works = () => (
                 hoverColor={hoverColor}
                 route={route}
               />
-              // eslint-disable-next-line comma-dangle
             )
           )}
           <CardWork />

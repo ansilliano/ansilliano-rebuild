@@ -11,8 +11,11 @@ import WindsurfPage from '../../../src/components/Experiments/WindsurfPage';
 import Windsurf from '../../../src/components/icons/Windsurf';
 import Loader from '../../../src/components/Loader/Loader';
 import MenuWork from '../../../src/components/Menu/MenuWork';
+import CustomHead from '../../../src/components/Utils/CustomHead';
 // db
 import db from '../../../src/db.json';
+import { titleCase } from '../../../src/helpers/titlecase';
+
 const pageComponent = {
   illustration: IllustrationPage,
   branding: BrandingPage,
@@ -30,6 +33,7 @@ const icons = {
 const DetailExperiments = () => {
   const router = useRouter();
   const id = router.query['id'];
+  const project = router.query['path'];
   const path = 'experiments';
 
   const { experiments } = db;
@@ -42,6 +46,7 @@ const DetailExperiments = () => {
 
   return (
     <>
+      <CustomHead title={titleCase(project)} />
       <div className='base-container'>
         <Contact />
         <MenuWork items={experiments} icons={icons} path={path} />

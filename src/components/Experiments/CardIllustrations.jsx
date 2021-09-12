@@ -1,7 +1,7 @@
 /* eslint-disable operator-linebreak */
-import Image from 'next/image';
 import React from 'react';
 import useObserver from '../../hooks/useObserver';
+import ImageLoad from '../ImageLoad';
 
 const CardIllustrations = ({
   image,
@@ -28,7 +28,7 @@ const CardIllustrations = ({
       onClick={() => handleModal({ uid, keyTag, tag })}>
       {show && (
         <>
-          <Image src={image} alt={title} fitObject={fitObject} layout='fill' />
+          <ImageLoad src={image} alt={title} fitObject={fitObject} />
           <p>{title}</p>
         </>
       )}

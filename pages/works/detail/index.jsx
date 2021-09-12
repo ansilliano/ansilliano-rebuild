@@ -13,6 +13,7 @@ import RocketFroz from '../../../src/components/Works/icons/RocketFroz';
 import PikaPage from '../../../src/components/Works/Pika';
 import { AppContext } from '../../../src/context/AppContext';
 import db from '../../../src/db.json';
+import { titleCase } from '../../../src/helpers/titlecase';
 
 export async function getStaticProps(context) {
   return {
@@ -44,10 +45,6 @@ const DetailWork = () => {
   if (!id) {
     return <Loader />;
   }
-
-  const titleCase = (word) => {
-    return word.charAt(0).toUpperCase() + word.substr(1).toLowerCase();
-  };
 
   const { Children } = projects.find((item) => item.id === Number(id));
 
