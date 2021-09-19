@@ -1,7 +1,46 @@
 import Head from 'next/head';
+import { useEffect } from 'react';
 import RRSS from '../src/components/Home/RRSS';
 
-export default function Home() {
+export async function getServerSideProps({ req, ...args }) {
+  const { resolvedUrl } = args;
+
+  console.log(resolvedUrl);
+  let userAgent;
+  if (req) {
+    userAgent = req.headers['user-agent'];
+  } else {
+    userAgent = navigator.userAgent;
+  }
+
+  const isMobile = Boolean(
+    userAgent.match(
+      /Android|BlackBerry|iPhone|iPad|iPod|Opera Mini|IEMobile|WPDesktop/i
+    )
+  );
+
+  // if (isMobile) {
+  //   return {
+  //     redirect: {
+  //       destination: `mobile.ansilliano.com/${resolvedUrl}`,
+  //     },
+  //   };
+  // }
+
+  return {
+    props: {
+      isMobile,
+    },
+  };
+}
+
+export default function Home({ isMobile }) {
+  useEffect(() => {
+    if (isMobile) {
+      document.location = 'https://www.m.ansilliano.com/';
+    }
+  }, [isMobile]);
+
   return (
     <>
       <Head>

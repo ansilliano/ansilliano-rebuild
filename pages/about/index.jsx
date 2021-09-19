@@ -113,7 +113,7 @@ const About = () => {
                   <div>Adaptability</div>
                   <div>
                     Creativity
-                    <span>and homurous</span>
+                    <span>and humorous</span>
                   </div>
                   <div>Critical Thinking</div>
                   <div>Patience</div>
