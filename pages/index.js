@@ -37,7 +37,7 @@ export async function getServerSideProps({ req, ...args }) {
 export default function Home({ isMobile }) {
   useEffect(() => {
     if (isMobile) {
-      document.location = 'https://www.m.ansilliano.com/';
+      document.location = 'https://m.ansilliano.com/';
     }
   }, [isMobile]);
 

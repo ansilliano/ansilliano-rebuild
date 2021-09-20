@@ -1,7 +1,7 @@
 import { useRouter } from 'next/dist/client/router';
 import Head from 'next/head';
 import Image from 'next/image';
-import React, { useContext } from 'react';
+import React, { useContext, useEffect } from 'react';
 import Education from '../../src/components/About/Education/Education';
 import Experiencie from '../../src/components/About/Experiencie';
 import Aiesec from '../../src/components/About/Experiencie/Aiesec';
@@ -24,10 +24,46 @@ const components = {
   aiesec: Aiesec,
 };
 
-const About = () => {
+export async function getServerSideProps({ req, ...args }) {
+  const { resolvedUrl } = args;
+
+  console.log(resolvedUrl);
+  let userAgent;
+  if (req) {
+    userAgent = req.headers['user-agent'];
+  } else {
+    userAgent = navigator.userAgent;
+  }
+
+  const isMobile = Boolean(
+    userAgent.match(
+      /Android|BlackBerry|iPhone|iPad|iPod|Opera Mini|IEMobile|WPDesktop/i
+    )
+  );
+
+  // if (isMobile) {
+  //   return {
+  //     redirect: {
+  //       destination: `mobile.ansilliano.com/${resolvedUrl}`,
+  //     },
+  //   };
+  // }
+
+  return {
+    props: {
+      isMobile,
+    },
+  };
+}
+
+const About = ({ isMobile }) => {
   const router = useRouter();
 
-  console.log(router);
+  useEffect(() => {
+    if (isMobile) {
+      document.location = `https://m.ansilliano.com/${router.pathname}`;
+    }
+  }, [isMobile, router.pathname]);
 
   const { state, handleModal, removeModal } = useContext(AppContext);
   const { isOpen, element } = state;
