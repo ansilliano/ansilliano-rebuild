@@ -1,3 +1,6 @@
+import { useRouter } from 'next/dist/client/router';
+import { useEffect } from 'react';
+
 export async function getServerSideProps({ req, ...args }) {
   const { resolvedUrl } = args;
 
