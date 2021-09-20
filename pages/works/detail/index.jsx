@@ -15,11 +15,6 @@ import { AppContext } from '../../../src/context/AppContext';
 import db from '../../../src/db.json';
 import { titleCase } from '../../../src/helpers/titlecase';
 
-export async function getStaticProps(context) {
-  return {
-    props: {},
-  };
-}
 const icons = {
   dailyui: DailyUI,
   pika: Pika,
