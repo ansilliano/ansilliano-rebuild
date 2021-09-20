@@ -1,5 +1,5 @@
 import { useRouter } from 'next/router';
-import React from 'react';
+import React, { useEffect } from 'react';
 import Contact from '../../../src/components/Contact';
 import BrandingPage from '../../../src/components/Experiments/BrandingPage';
 import Branding from '../../../src/components/Experiments/icons/Branding';
@@ -30,8 +30,47 @@ const icons = {
   sketching: Sketching,
 };
 
-const DetailExperiments = () => {
+export async function getServerSideProps({ req, ...args }) {
+  const { resolvedUrl } = args;
+
+  console.log(resolvedUrl);
+  let userAgent;
+  if (req) {
+    userAgent = req.headers['user-agent'];
+  } else {
+    userAgent = navigator.userAgent;
+  }
+
+  const isMobile = Boolean(
+    userAgent.match(
+      /Android|BlackBerry|iPhone|iPad|iPod|Opera Mini|IEMobile|WPDesktop/i
+    )
+  );
+
+  // if (isMobile) {
+  //   return {
+  //     redirect: {
+  //       destination: `mobile.ansilliano.com/${resolvedUrl}`,
+  //     },
+  //   };
+  // }
+
+  return {
+    props: {
+      isMobile,
+    },
+  };
+}
+
+const DetailExperiments = ({ isMobile }) => {
   const router = useRouter();
+
+  useEffect(() => {
+    if (isMobile) {
+      document.location = `https://m.ansilliano.com/${router.pathname}`;
+    }
+  }, [isMobile, router.pathname]);
+
   const id = router.query['id'];
   const project = router.query['path'];
   const path = 'experiments';

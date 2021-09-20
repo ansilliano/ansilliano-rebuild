@@ -1,5 +1,5 @@
 import { useRouter } from 'next/router';
-import React, { useContext } from 'react';
+import React, { useContext, useEffect } from 'react';
 import Contact from '../../../src/components/Contact';
 import Loader from '../../../src/components/Loader/Loader';
 import MenuWork from '../../../src/components/Menu/MenuWork';
@@ -31,8 +31,47 @@ const pageComponent = {
   pika: PikaPage,
 };
 
-const DetailWork = () => {
+export async function getServerSideProps({ req, ...args }) {
+  const { resolvedUrl } = args;
+
+  console.log(resolvedUrl);
+  let userAgent;
+  if (req) {
+    userAgent = req.headers['user-agent'];
+  } else {
+    userAgent = navigator.userAgent;
+  }
+
+  const isMobile = Boolean(
+    userAgent.match(
+      /Android|BlackBerry|iPhone|iPad|iPod|Opera Mini|IEMobile|WPDesktop/i
+    )
+  );
+
+  // if (isMobile) {
+  //   return {
+  //     redirect: {
+  //       destination: `mobile.ansilliano.com/${resolvedUrl}`,
+  //     },
+  //   };
+  // }
+
+  return {
+    props: {
+      isMobile,
+    },
+  };
+}
+
+const DetailWork = ({ isMobile }) => {
   const router = useRouter();
+
+  useEffect(() => {
+    if (isMobile) {
+      document.location = `https://m.ansilliano.com/${router.pathname}`;
+    }
+  }, [isMobile, router.pathname]);
+
   const id = router.query['id'];
   const project = router.query['path'];
   const path = 'works';
