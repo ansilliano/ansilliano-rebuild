@@ -1,5 +1,5 @@
 import { useRouter } from 'next/dist/client/router';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import Loader from '../../src/components/Loader/Loader';
 
 export async function getServerSideProps({ req, ...args }) {
@@ -25,6 +25,7 @@ export async function getServerSideProps({ req, ...args }) {
 }
 
 const Portafolio = ({ isMobile }) => {
+  const [isLoading, setLoading] = useState(true);
   const router = useRouter();
 
   useEffect(() => {
@@ -33,7 +34,12 @@ const Portafolio = ({ isMobile }) => {
     } else {
       document.location = `https://ansilliano.com/`;
     }
+    setLoading(false);
   }, [isMobile, router.pathname]);
+
+  if (isLoading) {
+    return <Loader />;
+  }
 
   return <Loader />;
 };

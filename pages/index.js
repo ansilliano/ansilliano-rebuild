@@ -1,6 +1,7 @@
 import Head from 'next/head';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import RRSS from '../src/components/Home/RRSS';
+import Loader from '../src/components/Loader/Loader';
 
 export async function getServerSideProps({ req, ...args }) {
   const { resolvedUrl } = args;
@@ -19,14 +20,6 @@ export async function getServerSideProps({ req, ...args }) {
     )
   );
 
-  // if (isMobile) {
-  //   return {
-  //     redirect: {
-  //       destination: `mobile.ansilliano.com/${resolvedUrl}`,
-  //     },
-  //   };
-  // }
-
   return {
     props: {
       isMobile,
@@ -35,11 +28,17 @@ export async function getServerSideProps({ req, ...args }) {
 }
 
 export default function Home({ isMobile }) {
+  const [isLoading, setLoading] = useState(true);
   useEffect(() => {
     if (isMobile) {
       document.location = 'https://m.ansilliano.com/';
     }
+    setLoading(false);
   }, [isMobile]);
+
+  if (isLoading) {
+    return <Loader />;
+  }
 
   return (
     <>

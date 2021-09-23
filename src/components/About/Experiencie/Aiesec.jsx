@@ -3,7 +3,6 @@ import React from 'react';
 import iconModal from '../../../../public/assets/img/experiencie/img-experience.png';
 
 const Aiesec = () => {
-  console.log(iconModal.src);
   return (
     <div className='experiencie__aiesec experiencie-modal future-modal'>
       <svg

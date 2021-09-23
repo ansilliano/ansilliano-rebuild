@@ -26,7 +26,6 @@ const CardWork = ({
   const { push } = useRouter();
 
   const handleClick = (id) => {
-    console.log(id);
     if (path === 'works') {
       if (id !== undefined && id !== 3) {
         push(`${path}/detail/?path=${route}&id=${id}`);
@@ -34,13 +33,11 @@ const CardWork = ({
 
       if (id === 3) {
         setOpen(!isOpen);
-        console.log('click froz');
         setVisible(!isVisible);
       }
     }
 
     if (path === 'experiments') {
-      console.log(route);
       if (id !== undefined) {
         push(`${path}/detail/?path=${route}&id=${id}`);
       }

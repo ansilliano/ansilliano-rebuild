@@ -2,8 +2,9 @@
 import { useRouter } from 'next/dist/client/router';
 import Head from 'next/head';
 import Image from 'next/image';
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import Contact from '../../src/components/Contact';
+import Loader from '../../src/components/Loader/Loader';
 import CardWork from '../../src/components/Works/CardWork';
 import DailyUI from '../../src/components/Works/icons/DailyUI';
 // icons
@@ -23,7 +24,6 @@ const icons = {
 export async function getServerSideProps({ req, ...args }) {
   const { resolvedUrl } = args;
 
-  console.log(resolvedUrl);
   let userAgent;
   if (req) {
     userAgent = req.headers['user-agent'];
@@ -37,14 +37,6 @@ export async function getServerSideProps({ req, ...args }) {
     )
   );
 
-  // if (isMobile) {
-  //   return {
-  //     redirect: {
-  //       destination: `mobile.ansilliano.com/${resolvedUrl}`,
-  //     },
-  //   };
-  // }
-
   return {
     props: {
       isMobile,
@@ -53,14 +45,19 @@ export async function getServerSideProps({ req, ...args }) {
 }
 
 const Works = ({ isMobile }) => {
+  const [isLoading, setLoading] = useState(true);
   const router = useRouter();
 
   useEffect(() => {
     if (isMobile) {
       document.location = `https://ansilliano.com/${router.pathname}`;
     }
+    setLoading(false);
   }, [isMobile, router.pathname]);
 
+  if (isLoading) {
+    return <Loader />;
+  }
   return (
     <>
       <Head>

@@ -1,7 +1,7 @@
 import { useRouter } from 'next/dist/client/router';
 import Head from 'next/head';
 import Image from 'next/image';
-import React, { useContext, useEffect } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import Education from '../../src/components/About/Education/Education';
 import Experiencie from '../../src/components/About/Experiencie';
 import Aiesec from '../../src/components/About/Experiencie/Aiesec';
@@ -11,6 +11,7 @@ import Platzi from '../../src/components/About/Experiencie/Platzi';
 import Spain from '../../src/components/About/Experiencie/Spain';
 import Tecma from '../../src/components/About/Experiencie/Tecma';
 import Contact from '../../src/components/Contact';
+import Loader from '../../src/components/Loader/Loader';
 import Modal from '../../src/components/Modal';
 import { AppContext } from '../../src/context/AppContext';
 import doodle from '/public/assets/img/about-me-doodle.svg';
@@ -41,14 +42,6 @@ export async function getServerSideProps({ req, ...args }) {
     )
   );
 
-  // if (isMobile) {
-  //   return {
-  //     redirect: {
-  //       destination: `mobile.ansilliano.com/${resolvedUrl}`,
-  //     },
-  //   };
-  // }
-
   return {
     props: {
       isMobile,
@@ -57,19 +50,21 @@ export async function getServerSideProps({ req, ...args }) {
 }
 
 const About = ({ isMobile }) => {
+  const [isLoading, setLoading] = useState(true);
   const router = useRouter();
 
   useEffect(() => {
     if (isMobile) {
       document.location = `https://m.ansilliano.com/${router.pathname}`;
     }
+    setLoading(false);
   }, [isMobile, router.pathname]);
 
   const { state, handleModal, removeModal } = useContext(AppContext);
   const { isOpen, element } = state;
 
-  if (!router.isReady) {
-    return <h1>...loading</h1>;
+  if (isLoading) {
+    return <Loader />;
   }
 
   return (

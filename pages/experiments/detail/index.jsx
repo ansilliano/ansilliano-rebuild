@@ -1,5 +1,5 @@
 import { useRouter } from 'next/router';
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import Contact from '../../../src/components/Contact';
 import BrandingPage from '../../../src/components/Experiments/BrandingPage';
 import Branding from '../../../src/components/Experiments/icons/Branding';
@@ -63,25 +63,30 @@ export async function getServerSideProps({ req, ...args }) {
 }
 
 const DetailExperiments = ({ isMobile }) => {
+  const [isLoading, setLoading] = useState(true);
   const router = useRouter();
 
   useEffect(() => {
     if (isMobile) {
-      document.location = `https://m.ansilliano.com/${router.pathname}`;
+      document.location = `https://m.ansilliano.com/${router.asPath}`;
     }
-  }, [isMobile, router.pathname]);
+    setLoading(false);
+  }, [isMobile, router.asPath]);
 
   const id = router.query['id'];
   const project = router.query['path'];
   const path = 'experiments';
 
   const { experiments } = db;
+  const { Children } = experiments.find((item) => item.id === Number(id));
 
   if (!id) {
     return <Loader />;
   }
 
-  const { Children } = experiments.find((item) => item.id === Number(id));
+  if (isLoading) {
+    return <Loader />;
+  }
 
   return (
     <>

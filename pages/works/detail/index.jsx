@@ -1,5 +1,5 @@
 import { useRouter } from 'next/router';
-import React, { useContext, useEffect } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import Contact from '../../../src/components/Contact';
 import Loader from '../../../src/components/Loader/Loader';
 import MenuWork from '../../../src/components/Menu/MenuWork';
@@ -59,13 +59,15 @@ export async function getServerSideProps({ req, ...args }) {
 }
 
 const DetailWork = ({ isMobile }) => {
+  const [isLoading, setLoading] = useState(true);
   const router = useRouter();
 
   useEffect(() => {
     if (isMobile) {
-      document.location = `https://m.ansilliano.com/${router.pathname}`;
+      document.location = `https://m.ansilliano.com/${router.asPath}`;
     }
-  }, [isMobile, router.pathname]);
+    setLoading(false);
+  }, [isMobile, router.asPath]);
 
   const id = router.query['id'];
   const project = router.query['path'];
@@ -75,12 +77,15 @@ const DetailWork = ({ isMobile }) => {
   const { isOpen, openFrozen } = state;
 
   const { projects } = db;
+  const { Children } = projects.find((item) => item.id === Number(id));
 
   if (!id) {
     return <Loader />;
   }
 
-  const { Children } = projects.find((item) => item.id === Number(id));
+  if (isLoading) {
+    return <Loader />;
+  }
 
   return (
     <>
