@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import NavLink from '../../utils/NavLink';
 import Icon from '../Icon';
+import MobileIcon from './MobileIcon';
 
 const Menu = ({ color, dotColor }) => {
   return (
@@ -14,14 +15,17 @@ const Menu = ({ color, dotColor }) => {
         </a>
       </Link>
       <div className='menu__items'>
+        <div className='mobile-icon'>
+          <MobileIcon />
+        </div>
         <NavLink href='/about' activeClassName='active-link'>
-          <a>About me</a>
+          <a className='desk-menu'>About me</a>
         </NavLink>
         <NavLink href='/works' activeClassName='active-link'>
-          <a>Works</a>
+          <a className='desk-menu'>Works</a>
         </NavLink>
         <NavLink href='/experiments' activeClassName='active-link'>
-          <a>Experiments</a>
+          <a className='desk-menu'>Experiments</a>
         </NavLink>
       </div>
       <div className='line-right' />

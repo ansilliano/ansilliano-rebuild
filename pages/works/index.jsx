@@ -57,7 +57,7 @@ const Works = ({ isMobile }) => {
 
   useEffect(() => {
     if (isMobile) {
-      document.location = `https://m.ansilliano.com/${router.pathname}`;
+      document.location = `https://ansilliano.com/${router.pathname}`;
     }
   }, [isMobile, router.pathname]);
 

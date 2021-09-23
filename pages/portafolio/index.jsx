@@ -1,10 +1,9 @@
 import { useRouter } from 'next/dist/client/router';
 import { useEffect } from 'react';
+import Loader from '../../src/components/Loader/Loader';
 
 export async function getServerSideProps({ req, ...args }) {
   const { resolvedUrl } = args;
-
-  console.log(resolvedUrl);
   let userAgent;
   if (req) {
     userAgent = req.headers['user-agent'];
@@ -17,14 +16,6 @@ export async function getServerSideProps({ req, ...args }) {
       /Android|BlackBerry|iPhone|iPad|iPod|Opera Mini|IEMobile|WPDesktop/i
     )
   );
-
-  // if (isMobile) {
-  //   return {
-  //     redirect: {
-  //       destination: `mobile.ansilliano.com/${resolvedUrl}`,
-  //     },
-  //   };
-  // }
 
   return {
     props: {
@@ -44,7 +35,7 @@ const Portafolio = ({ isMobile }) => {
     }
   }, [isMobile, router.pathname]);
 
-  return <div>redirect...</div>;
+  return <Loader />;
 };
 
 export default Portafolio;

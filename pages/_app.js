@@ -7,16 +7,8 @@ function MyApp({ Component, pageProps }) {
   return (
     <>
       <Head>
-        <link
-          rel='icon'
-          type='image/svg+xml'
-          href='../public/assets/images/favicon.svg'
-        />
-        <link
-          rel='icon'
-          type='image/png'
-          href='../public/assets/images/favicon.png'
-        />
+        <link rel='icon' type='image/svg+xml' href='/favicon.svg' />
+        <link rel='icon' type='image/png' href='/favicon.png' />
       </Head>
       <AppProvider>
         <Layout>

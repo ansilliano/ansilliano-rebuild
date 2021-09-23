@@ -3,10 +3,6 @@
     padding: 0 $em * 1.6;
   }
 
-  .header {
-    max-width: $wv-100;
-  }
-
   .h2-title {
     font-size: $font-24 * 2;
     text-align: left;
@@ -44,5 +40,62 @@
     @include center-items;
 
     margin-top: $em * 6;
+  }
+
+  .header {
+    @include center-items;
+
+    height: $em * 10;
+    width: $w-100;
+  }
+
+  .menu {
+    display: grid;
+    gap: $em * 2.4;
+    grid-template-columns: repeat(12, 1fr);
+    height: $em * 6.1;
+    position: relative;
+    width: $w-100;
+  }
+
+  .menu__icon {
+    @include center-items;
+
+    grid-column: 1/6;
+    width: $w-100;
+
+    svg {
+      width: $w-100;
+    }
+  }
+
+  .menu__items {
+  @include center-items;
+
+  padding-right: 15px;
+  grid-column: -2/-1;
+  justify-content: flex-end;
+
+    a {
+      color: $color-dark-wine;
+      font-family: $font-mansalva;
+      font-size: $font-18;
+      margin: 0 $em * 0.5;
+      position: relative;
+      text-decoration: none;
+    }
+  }
+
+  .icon {
+    grid-column: 1/6;
+  }
+
+  .desk-menu{
+    display: none;
+  }
+
+
+  .mobile-icon {
+    display: block
   }
 }
