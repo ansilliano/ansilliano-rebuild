@@ -1,5 +1,5 @@
 import { useRouter } from 'next/router';
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import Contact from '../../../src/components/Contact';
 import BrandingPage from '../../../src/components/Experiments/BrandingPage';
 import Branding from '../../../src/components/Experiments/icons/Branding';
@@ -66,12 +66,12 @@ const DetailExperiments = ({ isMobile }) => {
   const [isLoading, setLoading] = useState(true);
   const router = useRouter();
 
-  useEffect(() => {
-    if (isMobile) {
-      document.location = `https://m.ansilliano.com/${router.asPath}`;
-    }
-    setLoading(false);
-  }, [isMobile, router.asPath]);
+  // useEffect(() => {
+  //   if (isMobile) {
+  //     document.location = `https://m.ansilliano.com/${router.asPath}`;
+  //   }
+  //   setLoading(false);
+  // }, [isMobile, router.asPath]);
 
   const id = router.query['id'];
   const project = router.query['path'];
@@ -84,9 +84,9 @@ const DetailExperiments = ({ isMobile }) => {
     return <Loader />;
   }
 
-  if (isLoading) {
-    return <Loader />;
-  }
+  // if (isLoading) {
+  //   return <Loader />;
+  // }
 
   return (
     <>

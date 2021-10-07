@@ -1,5 +1,5 @@
 import { useRouter } from 'next/router';
-import React, { useContext, useEffect, useState } from 'react';
+import React, { useContext, useState } from 'react';
 import Contact from '../../../src/components/Contact';
 import Loader from '../../../src/components/Loader/Loader';
 import MenuWork from '../../../src/components/Menu/MenuWork';
@@ -62,12 +62,12 @@ const DetailWork = ({ isMobile }) => {
   const [isLoading, setLoading] = useState(true);
   const router = useRouter();
 
-  useEffect(() => {
-    if (isMobile) {
-      document.location = `https://m.ansilliano.com/${router.asPath}`;
-    }
-    setLoading(false);
-  }, [isMobile, router.asPath]);
+  // useEffect(() => {
+  //   if (isMobile) {
+  //     document.location = `https://m.ansilliano.com/${router.asPath}`;
+  //   }
+  //   setLoading(false);
+  // }, [isMobile, router.asPath]);
 
   const id = router.query['id'];
   const project = router.query['path'];
@@ -83,9 +83,9 @@ const DetailWork = ({ isMobile }) => {
     return <Loader />;
   }
 
-  if (isLoading) {
-    return <Loader />;
-  }
+  // if (isLoading) {
+  //   return <Loader />;
+  // }
 
   return (
     <>

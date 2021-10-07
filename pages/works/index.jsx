@@ -1,17 +1,17 @@
-// component
 import { useRouter } from 'next/dist/client/router';
-import Head from 'next/head';
 import Image from 'next/image';
 import React, { useState } from 'react';
 import Contact from '../../src/components/Contact';
+import CustomHead from '../../src/components/Utils/CustomHead';
 import CardWork from '../../src/components/Works/CardWork';
+// component
 import DailyUI from '../../src/components/Works/icons/DailyUI';
 // icons
 import Pika from '../../src/components/Works/icons/Pika';
 import RocketFroz from '../../src/components/Works/icons/RocketFroz';
 // db
-import db from '../../src/db.json';
-// doodle
+import { projects } from '../../src/db.json';
+// icons components
 import doodle from '/public/assets/img/work-doodle.svg';
 
 const icons = {
@@ -23,6 +23,7 @@ const icons = {
 export async function getServerSideProps({ req, ...args }) {
   const { resolvedUrl } = args;
 
+  console.log(resolvedUrl);
   let userAgent;
   if (req) {
     userAgent = req.headers['user-agent'];
@@ -43,13 +44,13 @@ export async function getServerSideProps({ req, ...args }) {
   };
 }
 
-const Works = ({ isMobile }) => {
+const Experiments = ({ isMobile }) => {
   const [isLoading, setLoading] = useState(true);
   const router = useRouter();
 
   // useEffect(() => {
   //   if (isMobile) {
-  //     document.location = `https://ansilliano.com/${router.pathname}`;
+  //     document.location = `https://m.ansilliano.com/${router.pathname}`;
   //   }
   //   setLoading(false);
   // }, [isMobile, router.pathname]);
@@ -57,31 +58,32 @@ const Works = ({ isMobile }) => {
   // if (isLoading) {
   //   return <Loader />;
   // }
+
   return (
     <>
-      <Head>
-        <title>Angela Illiano | Works</title>
-      </Head>
+      <CustomHead title='Experiments' />
 
       <div className='base-container'>
         <Contact />
         <section className='about base-container'>
-          <h2 className='h2-title'>This is my work!</h2>
+          <h2 className='h2-title'>some experiments!</h2>
           <div className='text-intro'>
             <article className='about__intro'>
               <div className='work__text'>
                 <p>
-                  Most of my experience is linked to the area of{' '}
-                  <span>architecture</span>, however, I’ve done freelance work
-                  related more to graphic design, branding, and UX/UI design.
+                  There are those who say that we must find our passion but with
+                  so many options in life, how to choose just one?.
                 </p>
                 <p>
-                  Since I began to educate myself and become more involved with
-                  the tech world, I could immediately realize that this is where
-                  I want to be due to its <strong>exponential growth</strong>. I
-                  don&lsquo;t know what the future will hold but I do know that
-                  with the best disposition on my part and thirst for knowledge,
-                  it is an industry in which you never stop growing..
+                  I consider myself a curious, creative person and always with
+                  the active <span>desire to learn</span> new things. That is
+                  why in my life I like to constantly experiment in different
+                  fields (personal, professional, academic, etc.)
+                </p>
+                <p>
+                  I decided to create this space to share those experiments that
+                  I’ve enjoyed in life and that have helped me to be the{' '}
+                  <span>Angela</span> that I am today.
                 </p>
               </div>
             </article>
@@ -92,7 +94,7 @@ const Works = ({ isMobile }) => {
         </section>
         <div className='cards-works'>
           <section className='grid-works'>
-            {db.projects.map(
+            {projects.map(
               ({ color, title, Children, hoverColor, id, route }) => (
                 <CardWork
                   path='works'
@@ -114,4 +116,4 @@ const Works = ({ isMobile }) => {
   );
 };
 
-export default Works;
+export default Experiments;
