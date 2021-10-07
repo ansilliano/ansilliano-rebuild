@@ -4,16 +4,15 @@ import React, { useState } from 'react';
 import Contact from '../../src/components/Contact';
 import CustomHead from '../../src/components/Utils/CustomHead';
 import CardWork from '../../src/components/Works/CardWork';
-// component
 import DailyUI from '../../src/components/Works/icons/DailyUI';
-// icons
 import Pika from '../../src/components/Works/icons/Pika';
 import RocketFroz from '../../src/components/Works/icons/RocketFroz';
 // db
-import { projects } from '../../src/db.json';
+import db from '../../src/db.json';
 // icons components
-import doodle from '/public/assets/img/work-doodle.svg';
+import doodle from '/public/assets/img/experiments-doodle.svg';
 
+// icons
 const icons = {
   dailyui: DailyUI,
   pika: Pika,
@@ -44,7 +43,7 @@ export async function getServerSideProps({ req, ...args }) {
   };
 }
 
-const Experiments = ({ isMobile }) => {
+const Works = ({ isMobile }) => {
   const [isLoading, setLoading] = useState(true);
   const router = useRouter();
 
@@ -94,18 +93,19 @@ const Experiments = ({ isMobile }) => {
         </section>
         <div className='cards-works'>
           <section className='grid-works'>
-            {projects.map(
-              ({ color, title, Children, hoverColor, id, route }) => (
+            {db.projects.map(
+              ({ id, color, title, hoverColor, Children, route }) => (
                 <CardWork
                   path='works'
                   key={id}
                   id={id}
                   color={color}
                   title={title}
+                  route={route}
                   Children={React.createElement(icons[Children], {})}
                   hoverColor={hoverColor}
-                  route={route}
                 />
+                // eslint-disable-next-line comma-dangle
               )
             )}
             <CardWork />
@@ -116,4 +116,4 @@ const Experiments = ({ isMobile }) => {
   );
 };
 
-export default Experiments;
+export default Works;

@@ -108,7 +108,7 @@
   }  
 
   .works-modal {
-    display: none;
+    // display: none;
   }
 
   .rrss-footer {
@@ -116,7 +116,8 @@
   }
 
   .footer-all {
-    font-size: $font-14;
+    padding: $em;
+    font-size: $em;
     width: $w-100;
     
     p {
