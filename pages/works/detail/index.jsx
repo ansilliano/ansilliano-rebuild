@@ -91,7 +91,7 @@ const DetailWork = ({ isMobile }) => {
     <>
       <CustomHead title={titleCase(project)} />
       <Modal id='modal' isOpen={isOpen} removeModal={removeModal}>
-        <Frozen isVisible={openFrozen} left='110px' bottom='85px' />
+        <Frozen isVisible={openFrozen} />
       </Modal>
       <div className='base-container'>
         <Contact />

@@ -1,19 +1,15 @@
 import React from 'react';
 
-const Frozen = ({ isVisible, left, bottom }) => {
+const Frozen = ({ isVisible, size = 600 }) => {
   const styles = {
     visibility: isVisible ? 'visible' : 'hidden',
-    left,
-    bottom,
-    width: 'auto',
-    height: 'auto',
   };
 
   return (
     <div className='works-modal' style={styles}>
       <svg
-        width={600}
-        height={300}
+        width={size}
+        height={size / 2}
         viewBox='0 0 774 347'
         fill='none'
         xmlns='http://www.w3.org/2000/svg'>

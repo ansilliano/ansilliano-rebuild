@@ -56,7 +56,7 @@ const CardWork = ({
       }}
       onClick={() => handleClick(id)}>
       <Modal id='modal' isOpen={isOpen} removeModal={removeModal} />
-      {id === 3 && <Frozen isVisible={isVisible} left='400px' />}
+      {id === 3 && <Frozen isVisible={isVisible} />}
       {Children}
       <p>{title}</p>
     </article>

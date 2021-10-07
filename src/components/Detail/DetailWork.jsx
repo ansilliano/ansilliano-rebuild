@@ -38,7 +38,7 @@ const DetailWork = () => {
   return (
     <>
       <Modal id='modal' isOpen={isOpen} removeModal={removeModal}>
-        <Frozen isVisible={openFrozen} left='110px' bottom='85px' />
+        <Frozen isVisible={openFrozen} />
       </Modal>
       <div className='base-container'>
         <Contact />
