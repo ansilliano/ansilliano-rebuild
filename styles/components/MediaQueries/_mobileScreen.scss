@@ -98,4 +98,30 @@
   .mobile-icon {
     display: block
   }
+
+  .grid-works {
+    grid-template-columns: 1fr;
+  }
+
+  .cards-works {
+    padding: 0;
+  }  
+
+  .works-modal {
+    display: none;
+  }
+
+  .rrss-footer {
+    display: none;
+  }
+
+  .footer-all {
+    font-size: $font-14;
+    width: $w-100;
+    
+    p {
+      text-align: center;
+      width: $w-100;
+    }
+  }
 }

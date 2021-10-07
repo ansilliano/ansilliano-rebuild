@@ -1,12 +1,11 @@
 import { useRouter } from 'next/dist/client/router';
 import Image from 'next/image';
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import Contact from '../../src/components/Contact';
 import Branding from '../../src/components/Experiments/icons/Branding';
 import Illustration from '../../src/components/Experiments/icons/Illustration';
 import Sketching from '../../src/components/Experiments/icons/Sketching';
 import Windsurf from '../../src/components/Experiments/icons/Windsurf';
-import Loader from '../../src/components/Loader/Loader';
 import CustomHead from '../../src/components/Utils/CustomHead';
 import CardWork from '../../src/components/Works/CardWork';
 // db
@@ -50,16 +49,16 @@ const Experiments = ({ isMobile }) => {
   const [isLoading, setLoading] = useState(true);
   const router = useRouter();
 
-  useEffect(() => {
-    if (isMobile) {
-      document.location = `https://m.ansilliano.com/${router.pathname}`;
-    }
-    setLoading(false);
-  }, [isMobile, router.pathname]);
+  // useEffect(() => {
+  //   if (isMobile) {
+  //     document.location = `https://m.ansilliano.com/${router.pathname}`;
+  //   }
+  //   setLoading(false);
+  // }, [isMobile, router.pathname]);
 
-  if (isLoading) {
-    return <Loader />;
-  }
+  // if (isLoading) {
+  //   return <Loader />;
+  // }
 
   return (
     <>

@@ -2,9 +2,8 @@
 import { useRouter } from 'next/dist/client/router';
 import Head from 'next/head';
 import Image from 'next/image';
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import Contact from '../../src/components/Contact';
-import Loader from '../../src/components/Loader/Loader';
 import CardWork from '../../src/components/Works/CardWork';
 import DailyUI from '../../src/components/Works/icons/DailyUI';
 // icons
@@ -48,16 +47,16 @@ const Works = ({ isMobile }) => {
   const [isLoading, setLoading] = useState(true);
   const router = useRouter();
 
-  useEffect(() => {
-    if (isMobile) {
-      document.location = `https://ansilliano.com/${router.pathname}`;
-    }
-    setLoading(false);
-  }, [isMobile, router.pathname]);
+  // useEffect(() => {
+  //   if (isMobile) {
+  //     document.location = `https://ansilliano.com/${router.pathname}`;
+  //   }
+  //   setLoading(false);
+  // }, [isMobile, router.pathname]);
 
-  if (isLoading) {
-    return <Loader />;
-  }
+  // if (isLoading) {
+  //   return <Loader />;
+  // }
   return (
     <>
       <Head>
