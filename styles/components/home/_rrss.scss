@@ -3,8 +3,7 @@
 
   flex-direction: column;
   grid-column: 1/2;
-  justify-content: flex-end;
-  padding-bottom: $em * 16.8;
+  justify-content: flex-start;
 
   > a {
     border-radius: 50%;
@@ -14,6 +13,11 @@
     &:hover {
       box-shadow: 5px 5px 13px #b53333, -5px -5px 13px #ff4f4f;
       cursor: pointer;
+    }
+
+    svg {
+      height: 60px;
+      width: 60px;
     }
   }
 }

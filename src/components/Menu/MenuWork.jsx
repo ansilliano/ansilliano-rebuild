@@ -15,7 +15,7 @@ const MenuWork = ({
   isOpen = null,
 }) => {
   return (
-    <div className='menu-work'>
+    <div className={`menu-work desktop-menu-details`}>
       <div className='arrow-up back'>
         <Arrow deg='90' color='#fff' />
       </div>

@@ -1,5 +1,5 @@
+/* eslint-disable @next/next/no-img-element */
 /* eslint-disable operator-linebreak */
-import Image from 'next/image';
 import React from 'react';
 import { shimmer, toBase64 } from '../../helpers/blurplaceholder';
 import useObserver from '../../hooks/useObserver';
@@ -15,7 +15,7 @@ const CardDaily = ({ image, title, number, handleModal, uid, tag }) => {
       onClick={() => handleModal({ uid, tag, keyTag })}>
       {show && (
         <>
-          <Image
+          <img
             src={image}
             alt={title}
             layout='fill'

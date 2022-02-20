@@ -1,6 +1,6 @@
+/* eslint-disable @next/next/no-img-element */
 /* eslint-disable comma-dangle */
 /* eslint-disable operator-linebreak */
-import Image from 'next/image';
 import React from 'react';
 import db from '../db.json';
 import { shimmer, toBase64 } from '../helpers/blurplaceholder';
@@ -31,7 +31,7 @@ const ModalImg = ({ uid = null, tag = null, keyTag = null }) => {
     <div className='modal-image'>
       {uid && (
         <div>
-          <Image
+          <img
             alt={item.title}
             src={item.filepath}
             layout='fill'

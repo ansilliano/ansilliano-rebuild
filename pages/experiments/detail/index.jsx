@@ -2,13 +2,13 @@ import { useRouter } from 'next/router';
 import React, { useState } from 'react';
 import Contact from '../../../src/components/Contact';
 import BrandingPage from '../../../src/components/Experiments/BrandingPage';
-import Branding from '../../../src/components/Experiments/icons/Branding';
-import Illustration from '../../../src/components/Experiments/icons/Illustration';
-import Sketching from '../../../src/components/Experiments/icons/Sketching';
+import BrandingIcon from '../../../src/components/Experiments/icons/Branding';
+import IllustrationIcon from '../../../src/components/Experiments/icons/Illustration';
+import SketchingIcon from '../../../src/components/Experiments/icons/Sketching';
+import WindsurfIcon from '../../../src/components/Experiments/icons/Windsurf';
 import IllustrationPage from '../../../src/components/Experiments/IllustrationPage';
 import SketchingPage from '../../../src/components/Experiments/SketchingPage';
 import WindsurfPage from '../../../src/components/Experiments/WindsurfPage';
-import Windsurf from '../../../src/components/icons/Windsurf';
 import Loader from '../../../src/components/Loader/Loader';
 import MenuWork from '../../../src/components/Menu/MenuWork';
 import CustomHead from '../../../src/components/Utils/CustomHead';
@@ -24,10 +24,10 @@ const pageComponent = {
 };
 
 const icons = {
-  illustration: Illustration,
-  branding: Branding,
-  windsurf: Windsurf,
-  sketching: Sketching,
+  illustration: IllustrationIcon,
+  branding: BrandingIcon,
+  windsurf: WindsurfIcon,
+  sketching: SketchingIcon,
 };
 
 export async function getServerSideProps({ req, ...args }) {

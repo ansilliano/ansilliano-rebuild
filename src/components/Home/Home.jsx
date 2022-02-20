@@ -8,10 +8,12 @@ const Home = () => {
       <section className='home base-container'>
         <RRSS />
         <div className='home__name'>
-          <p>Angela</p>
-          <p>Illiano</p>
-          {/* <Angela width='900' /> */}
-          {/* <Illiano width='1158' /> */}
+          <span>A</span>
+          <span>N</span>
+          <span>G</span>
+          <span>E</span>
+          <span>L</span>
+          <span>A</span>
         </div>
       </section>
     </div>

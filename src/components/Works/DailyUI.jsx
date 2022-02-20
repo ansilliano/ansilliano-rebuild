@@ -19,7 +19,7 @@ const DailyUIPage = () => {
   const { isOpen, uid, tag, keyTag } = modalState;
 
   return (
-    <div className='work-detail'>
+    <div className='work-detail mobile__container'>
       <div className='dailyUI'>
         <div className='main_container'>
           <div className='dailyUI__intro base-container-big'>

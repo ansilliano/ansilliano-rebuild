@@ -59,3 +59,72 @@
     transform: rotate(0) scale(25%);
   }
 }
+
+$t: 1s;
+$d: 0.08em;
+$n: 3;
+$e: cubic-bezier(0.86, 0, 0.07, 1);
+$front: $color-white;
+$back: $color-wine-red;
+
+@keyframes waveLetters {
+  0% {
+    transform: translate3d(0, 0, 0);
+    text-shadow: 0em 0em 0 $back;
+    color: $front;
+  }
+  30% {
+    transform: translate3d(0, 0, 0);
+    text-shadow: 0em 0em 0 $back;
+    color: $front;
+  }
+  70% {
+    transform: translate3d($d, -$d, 0);
+    text-shadow: -$d $d $back;
+    color: $front;
+  }
+  100% {
+    transform: translate3d($d, -$d, 0);
+    text-shadow: -$d $d $back;
+    color: $front;
+  }
+}
+
+.home__name {
+  grid-column: 2/-1;
+  width: $w-100;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.home__name > div {
+  align-items: center;
+  justify-content: space-between;
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  justify-items: center;
+  width: $w-100;
+}
+
+.letter_wave {
+  font-size: $font-24 * 6;
+  font-family: $font-barrio;
+  color: $color-white;
+  position: relative;
+  display: inline-block;
+}
+
+
+.home__name:hover   span {
+    animation: waveLetters $t infinite  $e;
+  @for $i from 1 through $n {
+    &:nth-last-child(#{$i}n) {
+      animation-delay: -$t * $i/$n/3 * $i;
+    }
+  }
+}
+
+.home__menu--mobile {
+  display: none;
+}

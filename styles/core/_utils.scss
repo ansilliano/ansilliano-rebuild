@@ -65,7 +65,8 @@
   position: absolute;
   transition: all 0.5s ease-in-out;
   z-index: 200;
-  left: 450px;
+  left: 190px;
+  top: 275px;
 
   &:hover {
     cursor: pointer;
@@ -83,4 +84,9 @@
   font-family: $font-poppins;
   font-size: $font-14;
   font-weight: $poppins-regular;
+}
+
+
+.mobile__container {
+  padding: 0 $em *2;
 }

@@ -16,8 +16,8 @@
 
   .rrss {
     svg {
-      height: 60px;
-      width: 60px;
+    height:   60px;
+      width:  60px;
     }
   }
 
@@ -28,9 +28,37 @@
   }
 
 .works-modal{
-  left: 1000px;
+  left: 450px;
+  top: 280px;
+}
+.mobile-menu-work{
+  display: none;
+}
+
+.home__menu--mobile  {
+  display: none;
+}
+
+
+}
+
+
+@media screen and (min-width: 2560px)  {
+
+  .works-modal{
+  left: 720px;
+  top: 280px;
+}
+
+.mobile-menu-work{
+  display: none;
+}
+
+.home__menu--mobile  {
+  display: none;
 }
 
 
 
-}
+
+  }

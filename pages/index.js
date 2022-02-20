@@ -1,6 +1,8 @@
 import Head from 'next/head';
 import { useState } from 'react';
+import Footer from '../src/components/Footer';
 import RRSS from '../src/components/Home/RRSS';
+import NavLink from '../src/utils/NavLink';
 
 export async function getServerSideProps({ req, ...args }) {
   const { resolvedUrl } = args;
@@ -55,30 +57,41 @@ export default function Home({ isMobile }) {
       </Head>
 
       <div className='container-red'>
-        <section className='home base-container'>
+        <section className='home base-container mobile-home-container'>
           <RRSS />
-          <div className='home__name'>
-            <p>
-              Angela
-              {/* <span>A</span>
-              <span>N</span>
-              <span>G</span>
-              <span>E</span>
-              <span>L</span>
-              <span>A</span> */}
-            </p>
-            <p>
-              Illiano
-              {/* <span>I</span>
-              <span>L</span>
-              <span>L</span>
-              <span>I</span>
-              <span>A</span>
-              <span>N</span>
-              <span>O</span> */}
-            </p>
+          <div className='home__name home__name--mobile'>
+            <div>
+              <span className='letter_wave'>A</span>
+              <span className='letter_wave'>N</span>
+              <span className='letter_wave'>G</span>
+              <span className='letter_wave'>E</span>
+              <span className='letter_wave'>L</span>
+              <span className='letter_wave'>A</span>
+              <span className='letter_wave show hidden'></span>
+              <span className='letter_wave show hidden'></span>
+              <span className='letter_wave show hidden'></span>
+              <span className='letter_wave'>I</span>
+              <span className='letter_wave'>L</span>
+              <span className='letter_wave'>L</span>
+              <span className='letter_wave'>I</span>
+              <span className='letter_wave'>A</span>
+              <span className='letter_wave'>N</span>
+              <span className='letter_wave'>O</span>
+            </div>
+          </div>
+          <div className='home__menu--mobile menu__items--mobile'>
+            <NavLink href='/about' activeClassName='active-link'>
+              <a className='mobile-menu'>About me</a>
+            </NavLink>
+            <NavLink href='/works' activeClassName='active-link'>
+              <a className='mobile-menu'>Works</a>
+            </NavLink>
+            <NavLink href='/experiments' activeClassName='active-link'>
+              <a className='mobile-menu'>Experiments</a>
+            </NavLink>
           </div>
         </section>
+        <Footer />
       </div>
     </>
   );

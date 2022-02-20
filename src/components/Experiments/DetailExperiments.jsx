@@ -41,7 +41,9 @@ const DetailExperiments = () => {
         <Contact />
         <MenuWork items={experiments} icons={icons} path={path} />
       </div>
-      <section>{React.createElement(pageComponent[Children])}</section>
+      <section className='mobile__container'>
+        {React.createElement(pageComponent[Children])}
+      </section>
     </>
   );
 };
