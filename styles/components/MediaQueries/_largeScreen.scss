@@ -1,4 +1,4 @@
-@media screen and (min-width: 2000px) {
+@media screen and (min-width: 1920px) {
   .rrss,
   .home__name {
     justify-content: flex-end;
@@ -27,10 +27,11 @@
     width: 102%;
   }
 
-.works-modal{
-  left: 450px;
-  top: 280px;
-}
+// .works-modal{
+//   left: 450px;
+//   top: 280px;
+// }
+
 .mobile-menu-work{
   display: none;
 }
@@ -45,10 +46,10 @@
 
 @media screen and (min-width: 2560px)  {
 
-  .works-modal{
-  left: 720px;
-  top: 280px;
-}
+//   .works-modal{
+//   left: 720px;
+//   top: 280px;
+// }
 
 .mobile-menu-work{
   display: none;

@@ -48,6 +48,7 @@
   height: $em * 29.4;
   transition: all 0.6s ease-in-out;
   width: $w-100;
+  position: relative;
 
   p {
     @include card-work-title($size: $font-24 * 2);
