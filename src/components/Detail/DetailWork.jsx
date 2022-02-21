@@ -5,9 +5,7 @@ import { AppContext } from '../../context/AppContext';
 import db from '../../db.json';
 import Contact from '../Contact';
 import MenuWork from '../Menu/MenuWork';
-import Modal from '../Modal';
 import DailyUIPage from '../Works/DailyUI';
-import Frozen from '../Works/Frozen';
 // icons
 import DailyUI from '../Works/icons/DailyUI';
 import Pika from '../Works/icons/Pika';
@@ -37,9 +35,9 @@ const DetailWork = () => {
 
   return (
     <>
-      <Modal id='modal' isOpen={isOpen} removeModal={removeModal}>
+      {/* <Modal id='modal' isOpen={isOpen} removeModal={removeModal}>
         <Frozen isVisible={openFrozen} />
-      </Modal>
+      </Modal> */}
       <div className='base-container'>
         <Contact />
         <MenuWork

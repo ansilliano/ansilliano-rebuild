@@ -3,10 +3,8 @@ import React, { useContext, useState } from 'react';
 import Contact from '../../../src/components/Contact';
 import Loader from '../../../src/components/Loader/Loader';
 import MenuWork from '../../../src/components/Menu/MenuWork';
-import Modal from '../../../src/components/Modal';
 import CustomHead from '../../../src/components/Utils/CustomHead';
 import DailyUIPage from '../../../src/components/Works/DailyUI';
-import Frozen from '../../../src/components/Works/Frozen';
 import DailyUI from '../../../src/components/Works/icons/DailyUI';
 import Pika from '../../../src/components/Works/icons/Pika';
 import RocketFroz from '../../../src/components/Works/icons/RocketFroz';
@@ -90,9 +88,10 @@ const DetailWork = ({ isMobile }) => {
   return (
     <>
       <CustomHead title={titleCase(project)} />
-      <Modal id='modal' isOpen={isOpen} removeModal={removeModal}>
+
+      {/* <Modal id='modal' isOpen={isOpen} removeModal={removeModal}>
         <Frozen isVisible={openFrozen} />
-      </Modal>
+      </Modal> */}
       <div className='base-container'>
         <Contact />
         <MenuWork

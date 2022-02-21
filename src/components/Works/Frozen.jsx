@@ -5,6 +5,8 @@ const Frozen = ({ isVisible, size = 600 }) => {
     visibility: isVisible ? 'visible' : 'hidden',
   };
 
+  console.log('Frozen', isVisible);
+
   return (
     <div className='works-modal' style={styles}>
       <svg
