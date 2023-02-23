@@ -17,7 +17,7 @@ const Future = () => {
           fill='#fff'
         />
       </svg>
-      <div div className='container-modal'>
+      <div  className='container-modal'>
         <Image src={iconModal} alt='future-img' />
         <h5 className='title-card'>Future</h5>
         <span>

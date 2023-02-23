@@ -17,7 +17,7 @@ const Spain = () => {
           fill='#fff'
         />
       </svg>
-      <div div className='container-modal-left'>
+      <div  className='container-modal-left'>
         <Image src={iconModal} alt='future-img' />
         <h5 className='title-card'>Spain</h5>
         <span>

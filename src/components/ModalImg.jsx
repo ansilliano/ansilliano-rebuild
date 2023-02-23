@@ -34,10 +34,6 @@ const ModalImg = ({ uid = null, tag = null, keyTag = null }) => {
           <img
             alt={item.title}
             src={item.filepath}
-            layout='fill'
-            blurDataURL={`data:image/svg+xml;base64,${toBase64(
-              shimmer(700, 475)
-            )}`}
             placeholder='blur'
           />
           <p>

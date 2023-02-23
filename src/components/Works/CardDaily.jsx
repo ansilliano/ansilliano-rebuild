@@ -18,10 +18,6 @@ const CardDaily = ({ image, title, number, handleModal, uid, tag }) => {
           <img
             src={image}
             alt={title}
-            layout='fill'
-            blurDataURL={`data:image/svg+xml;base64,${toBase64(
-              shimmer(700, 475)
-            )}`}
             placeholder='blur'
           />
           <p>

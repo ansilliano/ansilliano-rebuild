@@ -20,7 +20,7 @@ const Frozen = ({ isVisible, size = 600 }) => {
           fill='#fff'
         />
       </svg>
-      <div div className='container-modal-froz'>
+      <div  className='container-modal-froz'>
         <span>
           <h5>Rocket Froz</h5>
           <p>Section in progress</p>

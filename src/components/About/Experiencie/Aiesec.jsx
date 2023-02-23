@@ -16,7 +16,7 @@ const Aiesec = () => {
           fill='#fff'
         />
       </svg>
-      <div div className='container-modal-left'>
+      <div  className='container-modal-left'>
         <Image src={iconModal} alt='future-img' width={75} height={75} />
         <h5 className='title-card'>Spain</h5>
         <span>
