@@ -17,8 +17,8 @@ const Aiesec = () => {
         />
       </svg>
       <div  className='container-modal-left'>
-        <Image src={iconModal} alt='future-img' width={75} height={75} />
-        <h5 className='title-card'>Spain</h5>
+        <Image src={'https://storage.googleapis.com/ansilliano/icons/icons_06.png'} alt='future-img' width={75} height={75} />
+        <h5 className='title-card'>AIESEC</h5>
         <span>
           <p>
             We create 2 prototypes of home Ecological Gardens. The purpose of
