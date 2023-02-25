@@ -13,6 +13,7 @@ import TitleHeaders from '../Works/TitleHeaders';
 import Colors from './branding/Colors';
 import Marca from './branding/Marca';
 import DivergenteLogo from '/public/assets/branding/divergente_logo.svg';
+import KemusLogo from '/public/assets/branding/kemus_logo.svg';
 
 const BrandingPage = () => {
   const colors = [
@@ -272,19 +273,19 @@ const BrandingPage = () => {
             <div className='branding__container brading__convergente'>
               <div style={{ gridColumn: '1/4' }}>
                 <ImageLoad
-                  src='https://storage.googleapis.com/assets-portafolio/branding/CVGT1.png'
+                  src='https://storage.googleapis.com/ansilliano/branding/branding_01.png'
                   alt='Convergente-1'
                 />
               </div>
               <div style={{ gridColumn: '4/-1' }}>
                 <ImageLoad
-                  src='https://storage.googleapis.com/assets-portafolio/branding/CVGT3.png'
+                  src='https://storage.googleapis.com/ansilliano/branding/branding_05.png'
                   alt='Convergente-2'
                 />
               </div>
               <div style={{ gridColumn: '1/-1' }}>
                 <ImageLoad
-                  src='https://storage.googleapis.com/assets-portafolio/branding/CVGT2.png'
+                  src='https://storage.googleapis.com/ansilliano/branding/branding_04.png'
                   alt='Convergente-3'
                 />
               </div>
@@ -295,30 +296,18 @@ const BrandingPage = () => {
               subtitle='02_Design'
             />
             <div className='dailyUI__container'>
-              <div className='divergente__logo'>
-                <Image src={DivergenteLogo} alt='divergente--logo' />
+              <div className='divergente__logo' style={{boxShadow: "none"}}>
+                <Image src={KemusLogo} alt='divergente--logo' />
               </div>
             </div>
             <div className='branding__container--line'>
               <p>Variacioness</p>
             </div>
             <div className='branding__container brading__convergente'>
-              <div style={{ gridColumn: '1/4' }}>
-                <ImageLoad
-                  src='https://storage.googleapis.com/assets-portafolio/branding/CVGT1.png'
-                  alt='Convergente-1'
-                />
-              </div>
-              <div style={{ gridColumn: '4/-1' }}>
-                <ImageLoad
-                  src='https://storage.googleapis.com/assets-portafolio/branding/CVGT3.png'
-                  alt='Convergente-2'
-                />
-              </div>
               <div style={{ gridColumn: '1/-1' }}>
                 <ImageLoad
-                  src='https://storage.googleapis.com/assets-portafolio/branding/CVGT2.png'
-                  alt='Convergente-3'
+                  src='https://storage.googleapis.com/ansilliano/branding/kemus_variaciones.png'
+                  alt='kemus_variaciones'
                 />
               </div>
             </div>
@@ -407,13 +396,13 @@ const BrandingPage = () => {
               style={{ marginBottom: '50px' }}>
               <div style={{ gridColumn: '1/-1' }}>
                 <ImageLoad
-                  src='https://storage.googleapis.com/assets-portafolio/branding/kemus_marca_1.png'
+                  src='https://storage.googleapis.com/ansilliano/branding/branding_02.png'
                   alt='Kemus-1'
                 />
               </div>
               <div style={{ gridColumn: '1/-1' }}>
                 <ImageLoad
-                  src='https://storage.googleapis.com/assets-portafolio/branding/kemus_marca_2.png'
+                  src='https://storage.googleapis.com/ansilliano/branding/branding_03.png'
                   alt='Kemus-2'
                 />
               </div>

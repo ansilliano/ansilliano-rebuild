@@ -101,8 +101,8 @@ const PikaPage = () => {
           />
           <div className='pika__text'>
             <ImageLoad
-              src='https://storage.googleapis.com/assets-portafolio/pika-assets/macbook-mockup.png'
-              placeholder='https://storage.googleapis.com/assets-portafolio/pika-assets/macbook-mockup.png'
+              src='https://storage.googleapis.com/ansilliano/pika/pika_01.png'
+              placeholder='https://storage.googleapis.com/ansilliano/pika/pika_01.png'
               alt='macbook-pika'
             />
             <div>
@@ -172,8 +172,8 @@ const PikaPage = () => {
           <div className='pika__container pika-grid'>
             <ImageLoad
               classStyle='context__container--img'
-              src='https://storage.googleapis.com/assets-portafolio/pika-assets/context-illustration.svg'
-              placeholder='https://storage.googleapis.com/assets-portafolio/pika-assets/context-illustration.svg'
+              src='https://storage.googleapis.com/ansilliano/pika/pika_02.png'
+              placeholder='https://storage.googleapis.com/ansilliano/pika/pika_02.png'
               alt='context-illustration'
             />
             <div className='context__container'>
@@ -211,8 +211,8 @@ const PikaPage = () => {
             <div className='user__persona'>
               <ImageLoad
                 classStyle='user__persona--img'
-                src='https://storage.googleapis.com/assets-portafolio/pika-assets/user-persona-image.png'
-                placeholder='https://storage.googleapis.com/assets-portafolio/pika-assets/user-persona-image.png'
+                src='https://storage.googleapis.com/ansilliano/pika/pika_015.png'
+                placeholder='https://storage.googleapis.com/ansilliano/pika/pika_015.png'
                 alt='user-persona'
               />
               <div className='user__persona--profile'>
@@ -266,19 +266,19 @@ const PikaPage = () => {
           />
           <div className='pika__container pika-grid'>
             <InfoPika
-              img='https://storage.googleapis.com/assets-portafolio/pika-assets/intuitive.jpg'
+              img='https://storage.googleapis.com/ansilliano/pika/pika_09.png'
               title='Intuitive'
               text='Create a platform that allows the user to be directed exactly where they need it.'
               grid='1/5'
             />
             <InfoPika
-              img='https://storage.googleapis.com/assets-portafolio/pika-assets/consistent.jpg'
+              img='https://storage.googleapis.com/ansilliano/pika/pika_03.png'
               title='Consistent'
               text='All content will have the same information and will go through a filter before it can be published.'
               grid='5/9'
             />
             <InfoPika
-              img='https://storage.googleapis.com/assets-portafolio/pika-assets/specific.jpg'
+              img='https://storage.googleapis.com/ansilliano/pika/pika_04.png'
               title='Specific'
               text='Filtering section where the search can be optimized according to the needs of the users. In addition, there will always be context information.'
               grid='9/-1'
@@ -293,36 +293,36 @@ const PikaPage = () => {
           <div className='pika__container pika-grid'>
             <div className='wireframe_home'>
               <ImageLoad
-                src='https://storage.googleapis.com/assets-portafolio/pika-assets/Home.png'
-                placeholder='https://storage.googleapis.com/assets-portafolio/pika-assets/Home.png'
+                src='https://storage.googleapis.com/ansilliano/pika/pika_010.png'
+                placeholder='https://storage.googleapis.com/ansilliano/pika/pika_010.png'
                 alt='pika-home'
               />
             </div>
             <div className='wireframe_1'>
               <ImageLoad
-                src='https://storage.googleapis.com/assets-portafolio/pika-assets/Home_1.png'
-                placeholder='https://storage.googleapis.com/assets-portafolio/pika-assets/Home_1.png'
+                src='https://storage.googleapis.com/ansilliano/pika/pika_012.png'
+                placeholder='https://storage.googleapis.com/ansilliano/pika/pika_012.png'
                 alt='pika-home'
               />
             </div>
             <div className='wireframe_central'>
               <ImageLoad
-                src='https://storage.googleapis.com/assets-portafolio/pika-assets/Home_central.png'
-                placeholder='https://storage.googleapis.com/assets-portafolio/pika-assets/Home_central.png'
+                src='https://storage.googleapis.com/ansilliano/pika/pika_014.png'
+                placeholder='https://storage.googleapis.com/ansilliano/pika/pika_014.png'
                 alt='pika-central'
               />
             </div>
             <div className='wireframe_basic_end_left'>
               <ImageLoad
-                src='https://storage.googleapis.com/assets-portafolio/pika-assets/Home_end_left.png'
-                placeholder='https://storage.googleapis.com/assets-portafolio/pika-assets/Home_end_left.png'
+                src='https://storage.googleapis.com/ansilliano/pika/pika_013.png'
+                placeholder='https://storage.googleapis.com/ansilliano/pika/pika_013.png'
                 alt='pika-home'
               />
             </div>
             <div className='wireframe_basic_end_right'>
               <ImageLoad
-                src='https://storage.googleapis.com/assets-portafolio/pika-assets/Home_end_right.png'
-                placeholder='https://storage.googleapis.com/assets-portafolio/pika-assets/Home_end_right.png'
+                src='https://storage.googleapis.com/ansilliano/pika/pika_011.png'
+                placeholder='https://storage.googleapis.com/ansilliano/pika/pika_011.png'
                 alt='pika-home'
               />
             </div>
@@ -471,29 +471,29 @@ const PikaPage = () => {
             />
             <div className='wireframe_central'>
               <ImageLoad
-                src='https://storage.googleapis.com/assets-portafolio/pika-assets/pika_prototype_home.png'
-                placeholder='https://storage.googleapis.com/assets-portafolio/pika-assets/pika_prototype_home.png'
+                src='https://storage.googleapis.com/ansilliano/pika/pika_05.png'
+                placeholder='https://storage.googleapis.com/ansilliano/pika/pika_05.png'
                 alt='prototype-home'
               />
             </div>
             <div className='wireframe_central'>
               <ImageLoad
-                src='https://storage.googleapis.com/assets-portafolio/pika-assets/pika_prototype_4.png'
-                placeholder='https://storage.googleapis.com/assets-portafolio/pika-assets/pika_prototype_4.png'
+                src='https://storage.googleapis.com/ansilliano/pika/pika_06.png'
+                placeholder='https://storage.googleapis.com/ansilliano/pika/pika_06.png'
                 alt='prototype-4'
               />
             </div>
             <div className='wireframe_central'>
               <ImageLoad
-                src='https://storage.googleapis.com/assets-portafolio/pika-assets/pika_prototype_3.png'
-                placeholder='https://storage.googleapis.com/assets-portafolio/pika-assets/pika_prototype_3.png'
+                src='https://storage.googleapis.com/ansilliano/pika/pika_07.png'
+                placeholder='https://storage.googleapis.com/ansilliano/pika/pika_07.png'
                 alt='prototype-3'
               />
             </div>
             <div className='wireframe_central'>
               <ImageLoad
-                src='https://storage.googleapis.com/assets-portafolio/pika-assets/pika_prototype_2.png'
-                placeholder='https://storage.googleapis.com/assets-portafolio/pika-assets/pika_prototype_2.png'
+                src='https://storage.googleapis.com/ansilliano/pika/pika_08.png'
+                placeholder='https://storage.googleapis.com/ansilliano/pika/pika_08.png'
                 alt='prototype-2'
               />
             </div>
